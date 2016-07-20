@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bloom.solutions/api/v2/billers.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Jul 2016 09:17:09 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a2d5ae12d79844322a29c11150b53b03"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d4e6af7e-988f-4464-add2-562a8c0d8cfd
+      X-Runtime:
+      - '0.037194'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"slug":"TEST","service_charge":"5.0","first_field":"Account ID","first_field_format":"Alphanumeric","first_field_width":20,"second_field":"Account
+        Name","second_field_format":"Letters","second_field_width":100}]'
+    http_version: 
+  recorded_at: Wed, 20 Jul 2016 09:17:09 GMT
+recorded_with: VCR 3.0.3
