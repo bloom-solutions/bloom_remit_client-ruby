@@ -1,3 +1,4 @@
 ---
 token: changeme
 secret: changeme
+url: "https://bloomremit-staging.herokuapp.com"

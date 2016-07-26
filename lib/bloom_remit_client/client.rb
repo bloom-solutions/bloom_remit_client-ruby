@@ -1,15 +1,13 @@
 module BloomRemitClient
   class Client
 
-    DEFAULT_URL = "https://bloom.solutions"
-
     include Virtus.model
     attribute :token, String
     attribute :secret, String
-    attribute :url, String, default: DEFAULT_URL
+    attribute :url, String
 
     include ActiveModel::Validations
-    validates :token, :secret, presence: true
+    validates :token, :secret, :url, presence: true
 
     def billers
       request = BillersRequest.new(default_opts)

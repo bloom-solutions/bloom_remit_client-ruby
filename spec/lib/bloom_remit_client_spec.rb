@@ -5,10 +5,15 @@ RSpec.describe BloomRemitClient do
   describe ".new" do
     describe "given valid credentials" do
       it "returns a client" do
-        client = described_class.new(token: "asd", secret: "123")
+        client = described_class.new({
+          token: "asd",
+          secret: "123",
+          url: "url.com",
+        })
         expect(client).to be_a BloomRemitClient::Client
         expect(client.token).to eq "asd"
         expect(client.secret).to eq "123"
+        expect(client.url).to eq "url.com"
       end
     end
 
