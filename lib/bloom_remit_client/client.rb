@@ -15,6 +15,12 @@ module BloomRemitClient
       BillersResponse.new(raw_response: raw_response)
     end
 
+    def create_sender(opts)
+      request = CreateSenderRequest.new(default_opts)
+      raw_response = request.()
+      CreateSenderResponse.new(raw_response: raw_response)
+    end
+
     private
 
     def default_opts
