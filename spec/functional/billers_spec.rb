@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe "Billers List" do
 
   it "returns an array of billers", vcr: {record: :once} do
-    client = BloomRemitClient.new(CONFIG.slice(*%i[token secret url]))
+    client = BloomRemitClient.new(CONFIG.slice(*%i[token secret agent_id url]))
     response = client.billers
     billers = response.billers
 

@@ -4,10 +4,11 @@ module BloomRemitClient
     include Virtus.model
     attribute :token, String
     attribute :secret, String
+    attribute :agent_id, String
     attribute :url, String
 
     include ActiveModel::Validations
-    validates :token, :secret, :url, presence: true
+    validates :token, :secret, :agent_id, :url, presence: true
 
     def billers
       request = BillersRequest.new(default_opts)
@@ -24,7 +25,7 @@ module BloomRemitClient
     private
 
     def default_opts
-      attributes.slice(:token, :secret, :url)
+      attributes.slice(:token, :secret, :url, :agent_id)
     end
 
   end

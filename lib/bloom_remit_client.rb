@@ -8,6 +8,7 @@ require "bloom_remit_client/client"
 require "bloom_remit_client/models/biller"
 require "bloom_remit_client/requests/base_request"
 require "bloom_remit_client/requests/billers_request"
+require "bloom_remit_client/responses/base_response"
 require "bloom_remit_client/responses/billers_response"
 
 module BloomRemitClient
