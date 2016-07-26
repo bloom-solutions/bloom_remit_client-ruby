@@ -1,0 +1,321 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[token]/senders.json?api_secret=[secret]&sender%5Bemail%5D=90bf70a74065b20dd116410417abdb5f@email.com&sender%5Bfirst_name%5D=Luis&sender%5Blast_name%5D=Buenaventura&sender%5Bmobile%5D=%2B639175551111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 26 Jul 2016 02:13:14 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2cdf6aa119ecd93fa335887456f8b51b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - 7672ca9f-9508-4d4b-99e2-beb7b8a0265f
+      X-Runtime:
+      - '0.450972'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"77a6c819-c0da-4d7c-be10-b1669e9e61b7","email":"90bf70a74065b20dd116410417abdb5f@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"2fb719851cc4497d0725985ebbe60ad4"}'
+    http_version: 
+  recorded_at: Tue, 26 Jul 2016 02:06:53 GMT
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[token]/senders.json?api_secret=[secret]&sender%5Bemail%5D=9401d1aae79f9612435d510ccd77e49e@email.com&sender%5Bfirst_name%5D=Luis&sender%5Blast_name%5D=Buenaventura&sender%5Bmobile%5D=%2B639175551111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 26 Jul 2016 02:15:09 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d115fb451b7679e3abe688a4bd880390"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - c16e4856-16b4-4ea3-9c17-5bdf0f4edb16
+      X-Runtime:
+      - '0.141355'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"f7ce52a0-a7e7-45b4-afb4-f9d56d379a50","email":"9401d1aae79f9612435d510ccd77e49e@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"7751a2cafe040512fb87902b1c36244a"}'
+    http_version: 
+  recorded_at: Tue, 26 Jul 2016 02:08:47 GMT
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[token]/senders.json?api_secret=[secret]&sender%5Bemail%5D=5fd76d02b832bf6f5cda9ee2feec0cf8@email.com&sender%5Bfirst_name%5D=Luis&sender%5Blast_name%5D=Buenaventura&sender%5Bmobile%5D=%2B639175551111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 26 Jul 2016 02:15:34 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4c282d005585f39fb6fe360dd15a8593"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - 153e2c27-78bd-4c4a-9db2-3d4d73be5dfb
+      X-Runtime:
+      - '0.198308'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"be1ab7a2-d1e7-423c-b6a0-e73f3aa9f302","email":"5fd76d02b832bf6f5cda9ee2feec0cf8@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"bbdc5c4644049d584f967073063e1a69"}'
+    http_version: 
+  recorded_at: Tue, 26 Jul 2016 02:09:14 GMT
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[token]/senders.json?api_secret=[secret]&sender%5Bemail%5D=c2df86e8a08c4493e882052cf39a2b4b@email.com&sender%5Bfirst_name%5D=Luis&sender%5Blast_name%5D=Buenaventura&sender%5Bmobile%5D=%2B639175551111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 26 Jul 2016 02:58:08 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ea08db72c9e6dd76377ba5e1c197a091"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - a3e5d70a-2099-429a-903e-60b13b8a9146
+      X-Runtime:
+      - '0.158036'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"59808704-277e-45eb-b98d-3f27d4757e6f","email":"c2df86e8a08c4493e882052cf39a2b4b@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"8a994e3ac117edbf1b7c6eb4ed6a4b70"}'
+    http_version: 
+  recorded_at: Tue, 26 Jul 2016 02:58:08 GMT
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[token]/senders.json?api_secret=[secret]&sender%5Bemail%5D=0d854e5e2d1d6c718b43bdd96cf1ed2a@email.com&sender%5Bfirst_name%5D=Luis&sender%5Blast_name%5D=Buenaventura&sender%5Bmobile%5D=%2B639175551111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 26 Jul 2016 02:59:23 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b45998a1edbbb6702ed8a0074387d988"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - 5921059b-fef8-42fd-a3a6-c14e06f3ce84
+      X-Runtime:
+      - '0.189693'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"a876b803-b228-447f-be80-9eaf7725e2e8","email":"0d854e5e2d1d6c718b43bdd96cf1ed2a@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"bc09f44dbd7b4ac0f60afa3b007aa822"}'
+    http_version: 
+  recorded_at: Tue, 26 Jul 2016 02:59:23 GMT
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[token]/senders.json
+    body:
+      encoding: UTF-8
+      string: api_secret=[secret]&sender[first_name]=Luis&sender[last_name]=Buenaventura&sender[email]=bb83219dee947af82a3361c9cf72391f%40email.com&sender[mobile]=%2B639175551111
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 26 Jul 2016 03:10:47 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f04912c8ca72a9bb4b94c487bcfaaf6d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - ce9a2f18-1049-4ca2-b4ac-ad09e806e470
+      X-Runtime:
+      - '0.164275'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"abf4f855-7bf5-4d37-9c89-bb18d2e1838b","email":"bb83219dee947af82a3361c9cf72391f@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"a8df7bed607ee6a84f6ed7b0d7b93cc5"}'
+    http_version: 
+  recorded_at: Tue, 26 Jul 2016 03:10:48 GMT
+recorded_with: VCR 3.0.3

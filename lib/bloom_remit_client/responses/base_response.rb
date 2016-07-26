@@ -7,7 +7,7 @@ module BloomRemitClient
     private
 
     def data
-      JSON.parse(raw_response.body)
+      JSON.parse(raw_response.body).with_indifferent_access
     end
 
   end

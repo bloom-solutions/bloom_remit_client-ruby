@@ -17,7 +17,7 @@ module BloomRemitClient
     end
 
     def create_sender(opts)
-      request = CreateSenderRequest.new(default_opts)
+      request = CreateSenderRequest.new(default_opts.merge(sender: opts))
       raw_response = request.()
       CreateSenderResponse.new(raw_response: raw_response)
     end
