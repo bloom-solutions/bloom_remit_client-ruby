@@ -7,7 +7,13 @@ module BloomRemitClient
     private
 
     def data
-      JSON.parse(raw_response.body).with_indifferent_access
+      json = JSON.parse(raw_response.body)
+
+      if json.is_a?(Array)
+        json.map(&:with_indifferent_access)
+      else
+        json.with_indifferent_access
+      end
     end
 
   end

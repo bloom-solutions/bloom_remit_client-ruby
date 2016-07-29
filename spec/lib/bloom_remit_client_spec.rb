@@ -9,11 +9,13 @@ RSpec.describe BloomRemitClient do
           token: "asd",
           secret: "123",
           url: "url.com",
+          agent_id: "123",
         })
         expect(client).to be_a BloomRemitClient::Client
         expect(client.token).to eq "asd"
         expect(client.secret).to eq "123"
         expect(client.url).to eq "url.com"
+        expect(client.agent_id).to eq "123"
       end
     end
 

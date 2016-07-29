@@ -22,6 +22,14 @@ module BloomRemitClient
       CreateSenderResponse.new(raw_response: raw_response)
     end
 
+    def create_payment(opts)
+      params = default_opts.
+        merge(sender_id: opts.delete(:sender_id)).
+        merge(payment: opts)
+      request = CreatePaymentRequest.new(params)
+      CreatePaymentResponse.new(raw_response: request.())
+    end
+
     private
 
     def default_opts

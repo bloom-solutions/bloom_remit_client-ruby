@@ -8,6 +8,7 @@ module BloomRemitClient
       it { is_expected.to have_attribute(:token, String) }
       it { is_expected.to have_attribute(:secret, String) }
       it { is_expected.to have_attribute(:url, String) }
+      it { is_expected.to have_attribute(:agent_id, String) }
       it do
         is_expected.to have_attribute(:path, String).with_default(:default_path)
       end

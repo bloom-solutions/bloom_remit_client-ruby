@@ -5,6 +5,7 @@ module BloomRemitClient
     attribute :token, String
     attribute :secret, String
     attribute :url, String
+    attribute :agent_id, String
     attribute :path, String, lazy: true, default: :default_path
     attribute :endpoint, String, lazy: true, default: :default_endpoint
 
