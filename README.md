@@ -24,6 +24,10 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Factories
+
+To make testing easier, you may `require 'bloom_remit_client/factories'` in your app.
+
 ## Development
 
 - Copy `spec/config.yml.sample` to `spec/config.yml` and put your credentials
