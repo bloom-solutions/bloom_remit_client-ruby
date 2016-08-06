@@ -3,8 +3,7 @@ module BloomRemitClient
 
     include Virtus.model
     attribute :raw_response, Object
-    attribute(:body, {
-      Coercers::IndifferentHash,
+    attribute(:body, Coercers::IndifferentHash, {
       lazy: true,
       default: :default_body,
     })
