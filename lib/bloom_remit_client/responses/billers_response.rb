@@ -6,7 +6,7 @@ module BloomRemitClient
     private
 
     def default_billers
-      data.map { |hash| Biller.new(hash) }
+      body.map { |hash| Biller.new(hash) }
     end
 
   end

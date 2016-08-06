@@ -10,4 +10,10 @@ FactoryGirl.define do
     second_field_width 50
   end
 
+  factory(:bloom_remit_client_create_payment_response, {
+    class: "BloomRemitClient::CreatePaymentResponse",
+  }) do
+    body { {"json" => "value"} }
+  end
+
 end

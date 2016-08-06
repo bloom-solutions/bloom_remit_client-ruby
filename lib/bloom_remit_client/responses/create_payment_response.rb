@@ -10,7 +10,7 @@ module BloomRemitClient
     private
 
     def default_payment
-      Payment.new(data[:payment])
+      Payment.new(body[:payment])
     end
 
   end

@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Factories for app development
 
+### Changed
+- Use BaseResponse#body to access the `to_hash`ed json response
+
 ## [0.2.0] - 2016-07-29
 ### Added
 - Add ability to create sender

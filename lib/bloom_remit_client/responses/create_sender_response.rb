@@ -10,7 +10,7 @@ module BloomRemitClient
     private
 
     def default_sender
-      User.new(data[:sender])
+      User.new(body[:sender])
     end
 
   end

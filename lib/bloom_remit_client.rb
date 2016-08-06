@@ -3,6 +3,7 @@ require 'httparty'
 require 'active_model'
 require 'active_support/core_ext/hash/indifferent_access'
 require 'active_support/core_ext/object/try'
+require 'bloom_remit_client/coercers/indifferent_hash'
 require "bloom_remit_client/version"
 require "bloom_remit_client/client"
 require "bloom_remit_client/models/biller"
