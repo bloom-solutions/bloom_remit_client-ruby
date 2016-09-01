@@ -7,6 +7,7 @@ module BloomRemitClient
       subject { described_class }
       it { is_expected.to have_attribute(:raw_response) }
       it { is_expected.to have_attribute(:body) }
+      it { is_expected.to have_attribute(:success) }
     end
 
     describe "#body" do

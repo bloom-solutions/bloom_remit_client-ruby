@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Made response `#success` a virtus attribute, so that it can be set in factories
+
 ## [0.3.1] - 2016-08-06
 ### Fixed
 - Fix syntax issue

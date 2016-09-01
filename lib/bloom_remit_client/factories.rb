@@ -13,6 +13,7 @@ FactoryGirl.define do
   factory(:bloom_remit_client_create_payment_response, {
     class: "BloomRemitClient::CreatePaymentResponse",
   }) do
+    success true
     body { {"json" => "value"} }
   end
 

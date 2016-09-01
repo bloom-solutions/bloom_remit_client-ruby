@@ -7,8 +7,13 @@ module BloomRemitClient
       lazy: true,
       default: :default_body,
     })
+    attribute :success, Boolean, lazy: true, default: :default_success
 
     private
+
+    def default_success
+      raw_response.success?
+    end
 
     def default_body
       json = JSON.parse(raw_response.body)
