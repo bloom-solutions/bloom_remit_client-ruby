@@ -1,29 +1,49 @@
+# frozen_string_literal: true
 module BloomRemitClient
-  class BaseRequest
+  module Requests
+    class BaseRequest
+      include Virtus.model
+      include ActiveModel::Validations
+      include Concerns::HasBaseAuthentification
 
-    include Virtus.model
-    attribute :token, String
-    attribute :secret, String
-    attribute :url, String
-    attribute :agent_id, String
-    attribute :path, String, lazy: true, default: :default_path
-    attribute :endpoint, String, lazy: true, default: :default_endpoint
+      def call
+        RequestsSender.new(params).()
+      end
 
-    include ActiveModel::Validations
-    validates :token, :secret, :url, :path, presence: true
+      def params
+        {
+          type: type,
+          body: body,
+          url: {
+            host: ::BloomRemitClient.host,
+            path: path,
+            query_params: query_params
+          }
+        }
+      end
 
-    def call
-      HTTParty.get(self.endpoint)
+      private
+
+      def type
+        raise NotImplementedError, 'For subclass only!'
+      end
+
+      def path
+        raise NotImplementedError, 'For subclass only!'
+      end
+
+      def body
+        return unless body_params.present?
+        body_params.to_json
+      end
+
+      def body_params
+        {}
+      end
+
+      def query_params
+        attributes.slice(:api_secret)
+      end
     end
-
-    private
-
-    def default_endpoint
-      return nil if self.url.nil?
-      uri = URI.parse(self.url)
-      uri.path = path
-      uri.to_s
-    end
-
   end
 end

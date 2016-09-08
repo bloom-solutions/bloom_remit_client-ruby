@@ -1,40 +1,40 @@
+# frozen_string_literal: true
 module BloomRemitClient
   class Client
-
     include Virtus.model
-    attribute :token, String
-    attribute :secret, String
-    attribute :agent_id, String
-    attribute :url, String
-
     include ActiveModel::Validations
-    validates :token, :secret, :agent_id, :url, presence: true
 
-    def billers
-      request = BillersRequest.new(default_opts)
-      raw_response = request.()
-      BillersResponse.new(raw_response: raw_response)
+    attribute :api_token, String
+    attribute :api_secret, String
+    attribute :agent_id, String
+
+    validates :api_token, :api_secret, presence: true
+
+    # GET
+    # /api/v1/partners/:api_token/credits
+    # Parameters: none
+    def credits(params = {})
+      request_params = params.merge(access_params)
+      Requests::Credit::List.new(request_params).()
     end
 
-    def create_sender(opts)
-      request = CreateSenderRequest.new(default_opts.merge(sender: opts))
-      raw_response = request.()
-      CreateSenderResponse.new(raw_response: raw_response)
-    end
-
-    def create_payment(opts)
-      params = default_opts.
-        merge(sender_id: opts.delete(:sender_id)).
-        merge(payment: opts)
-      request = CreatePaymentRequest.new(params)
-      CreatePaymentResponse.new(raw_response: request.())
+    # GET
+    # /api/v1/partners/:api_token/credits/history
+    # Parameters: none
+    def credits_history(params = {})
+      request_params = params.merge(access_params)
+      Requests::Credit::History.new(request_params).()
     end
 
     private
 
-    def default_opts
-      attributes.slice(:token, :secret, :url, :agent_id)
+    # Should overwrite any other `:api_token`, `:api_secret`
+    def access_params
+      @access_params ||= attributes.slice(:api_token, :api_secret)
     end
 
+    def default_params
+      @default_params ||= attributes.slice(:agent_id)
+    end
   end
 end
