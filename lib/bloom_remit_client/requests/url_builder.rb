@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module BloomRemitClient
   module Requests
     class UrlBuilder
@@ -8,7 +9,7 @@ module BloomRemitClient
       attribute :scheme, String, default: 'https'
       attribute :subdomain, String
       attribute :userinfo, String
-      attribute :path, String
+      attribute :path, Coercers::Path
       attribute :host, String
       attribute :port, Integer
       attribute :query, String
@@ -25,12 +26,6 @@ module BloomRemitClient
       def host
         return super unless subdomain.present?
         "#{subdomain}.#{super}"
-      end
-
-      def path
-        raw_path = super
-        return raw_path if !raw_path.is_a?(String) || raw_path[0] == '/'
-        "/#{raw_path}"
       end
 
       def query

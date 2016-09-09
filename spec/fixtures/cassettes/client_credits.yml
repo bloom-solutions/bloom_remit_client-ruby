@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bloom.solutions/api/v1/partners/ce25326f-5b25-4777-a8fc-8e6a12d74104/credits?api_secret=0e9aca389291a1780168da2b15ab900e
+    uri: https://api.bloom.solutions/api/v1/partners/[api_token]/credits?api_secret=[api_secret]
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 08 Sep 2016 15:00:25 GMT
+      - Fri, 09 Sep 2016 13:51:13 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -31,13 +31,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"aac354d3a2ee493cb39ef7744aadae67"
+      - W/"bdf2e04e33289fea2fb45ab0cf892763"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c970b5f1-6f13-415c-8545-e576e1d539d1
+      - dcb97f76-b305-4d94-a28b-5885b784cb38
       X-Runtime:
-      - '0.078888'
+      - '0.086041'
       Strict-Transport-Security:
       - max-age=31536000
       Transfer-Encoding:
@@ -46,7 +46,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"address":"19NqqCn2EyZRFnyi1XwPLzQwM4HNgTnAuw","timestamp_ph":"2016-09-08T23:00:26.150+08:00","rates":{"btcusd":633.97728,"btcaud":799.150652,"btcphp":28903.955914,"btckrw":672074.520907}}'
+      string: '{"address":"19NqqCn2EyZRFnyi1XwPLzQwM4HNgTnAuw","timestamp_ph":"2016-09-09T21:51:13.928+08:00","rates":{"btcusd":633.97728,"btcaud":805.494625,"btcphp":28948.722065,"btckrw":674935.759359}}'
     http_version: 
-  recorded_at: Thu, 08 Sep 2016 15:00:26 GMT
+  recorded_at: Fri, 09 Sep 2016 13:51:14 GMT
 recorded_with: VCR 3.0.3

@@ -5,6 +5,7 @@ require 'active_model'
 require 'active_support/core_ext/hash/indifferent_access'
 require 'active_support/core_ext/object/try'
 require 'bloom_remit_client/coercers/indifferent_hash'
+require 'bloom_remit_client/coercers/path'
 require 'bloom_remit_client/concerns/has_base_authentification'
 require "bloom_remit_client/version"
 require "bloom_remit_client/client"
