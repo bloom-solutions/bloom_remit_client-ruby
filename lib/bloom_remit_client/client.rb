@@ -26,6 +26,24 @@ module BloomRemitClient
       Requests::Credit::History.new(request_params).()
     end
 
+    # GET
+    # /api/v1/rates
+    # Parameters:
+    #   partner_id:
+    #     String, required
+    #     API token
+    #   api_secret:
+    #     String, required
+    #   currency:
+    #     One of: [USDPHP, USDUSD, USDKRW, USDAUD, USDCAD, USDJPY, USDNZD, USDSGD, USDHKD,
+    #              USDCNY, USDEUR, USDVND, USDSAR, USDTWD, USDQAR, USDKWD, USDAED, USDGBP,
+    #              USDMYR, USDINR, USDIDR, USDBTC],
+    #     optional
+    def rates(params = {})
+      request_params = params.merge(access_params)
+      Requests::Rate::Show.new(request_params).()
+    end
+
     private
 
     # Should overwrite any other `:api_token`, `:api_secret`
