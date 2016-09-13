@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bloom.solutions/api/v1/partners/[api_token]/credits?api_secret=[api_secret]
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/credits?api_secret=[api_secret]
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 09 Sep 2016 13:51:13 GMT
+      - Tue, 13 Sep 2016 04:30:39 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -31,13 +31,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bdf2e04e33289fea2fb45ab0cf892763"
+      - W/"8198828208e98bea7a8bc4a08ef28d9b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dcb97f76-b305-4d94-a28b-5885b784cb38
+      - ad082149-3a28-4961-9dd0-327214e833a9
       X-Runtime:
-      - '0.086041'
+      - '0.114748'
       Strict-Transport-Security:
       - max-age=31536000
       Transfer-Encoding:
@@ -46,7 +46,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"address":"19NqqCn2EyZRFnyi1XwPLzQwM4HNgTnAuw","timestamp_ph":"2016-09-09T21:51:13.928+08:00","rates":{"btcusd":633.97728,"btcaud":805.494625,"btcphp":28948.722065,"btckrw":674935.759359}}'
+      string: '{"address":"16txuBfNXuXmmUHf8RiRMmaGokW5tR7nJ2","timestamp_ph":"2016-09-13T12:30:40.563+08:00","rates":{"btcusd":639.09,"btcaud":802.226028,"btcphp":28790.23109,"btckrw":673394.079281}}'
     http_version: 
-  recorded_at: Fri, 09 Sep 2016 13:51:14 GMT
+  recorded_at: Tue, 13 Sep 2016 04:30:41 GMT
 recorded_with: VCR 3.0.3

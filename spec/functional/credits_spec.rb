@@ -1,11 +1,12 @@
 require 'spec_helper'
 
 describe 'Base `credits` request' do
-  let(:client) { ::BloomRemitClient.new(CONFIG.slice(*%i(api_token api_secret))) }
+  let(:client) do
+    config = CONFIG.slice(*%i(api_token api_secret))
+    ::BloomRemitClient.new(config)
+  end
 
-  it "have success response" do
-    VCR.use_cassette('client_credits', record: :once) do
-      expect(client.credits).to be_success
-    end
+  it "have success response", vcr: {record: :once} do
+    expect(client.credits).to be_success
   end
 end
