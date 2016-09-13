@@ -1,9 +1,10 @@
 require 'spec_helper'
 
-RSpec.describe "Billers List" do
+RSpec.describe "Biller List" do
 
   it "returns an array of billers", vcr: {record: :once} do
-    client = BloomRemitClient.new(CONFIG.slice(*%i[token secret agent_id url]))
+    config = CONFIG.slice(*%i[api_token api_secret agent_id])
+    client = BloomRemitClient.new(config)
     response = client.billers
     billers = response.billers
 

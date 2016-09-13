@@ -44,6 +44,12 @@ module BloomRemitClient
       Requests::Rate::Show.new(request_params).()
     end
 
+    def billers(params={})
+      request_params = params.merge(access_params)
+      raw_response = Requests::Billers::List.new(request_params).()
+      Responses::Billers::List.new(raw_response: raw_response)
+    end
+
     private
 
     # Should overwrite any other `:api_token`, `:api_secret`
