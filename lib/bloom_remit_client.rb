@@ -21,11 +21,11 @@ require "bloom_remit_client/requests/credit/list"
 require "bloom_remit_client/requests/credit/history"
 require "bloom_remit_client/requests/rate/show"
 require "bloom_remit_client/requests/billers/list"
-# require "bloom_remit_client/requests/create_sender_request"
+require "bloom_remit_client/requests/senders/create"
 # require "bloom_remit_client/requests/create_payment_request"
 require "bloom_remit_client/responses/base"
 require "bloom_remit_client/responses/billers/list"
-# require "bloom_remit_client/responses/create_sender_response"
+require "bloom_remit_client/responses/senders/create"
 # require "bloom_remit_client/responses/create_payment_response"
 
 module BloomRemitClient

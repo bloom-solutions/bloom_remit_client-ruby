@@ -50,6 +50,13 @@ module BloomRemitClient
       Responses::Billers::List.new(raw_response: raw_response)
     end
 
+    def create_sender(sender_params={})
+      params = {sender: sender_params}
+      request_params = params.merge(default_params).merge(access_params)
+      raw_response = Requests::Senders::Create.new(request_params).()
+      Responses::Senders::Create.new(raw_response: raw_response)
+    end
+
     private
 
     # Should overwrite any other `:api_token`, `:api_secret`
