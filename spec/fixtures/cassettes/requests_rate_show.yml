@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bloom.solutions/api/v1/rates?api_secret=[api_secret]&currency&partner_id=[api_token]
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 09 Sep 2016 13:34:13 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7b302c29a23f73f1fbf690c5a7dd0f44"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb0407eb-c560-43ee-a001-f222a907758a
+      X-Runtime:
+      - '0.022414'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"PHPUSD":0.0211304802,"PHPCAD":0.0273690157,"PHPJPY":2.1709884527,"PHPAUD":0.0278248768,"PHPSGD":0.0286553375,"PHPHKD":0.1638803053,"PHPKRW":23.3148723404,"PHPEUR":0.018755442,"PHPGBP":0.0158666808,"PHPIDR":277.6073905106,"PHPVND":471.2417528638,"PHPMYR":0.0863072265,"PHPTHB":0.7347628468,"PHPZAR":0.3021142064,"PHPCNY":0.1411627866,"PHPBTC":3.453939680486874e-05,"USDAUD":1.35047,"USDKRW":1180.983849,"USDEUR":0.908382,"USDGBP":0.756759,"USDPHP":46.878799,"USDCAD":1.301499,"USDJPY":102.653648,"USDSGD":1.352324,"USDHKD":7.755421,"USDCNY":6.644376,"USDBTC":0.00156472484313633}'
+    http_version: 
+  recorded_at: Fri, 09 Sep 2016 13:34:14 GMT
+- request:
+    method: get
+    uri: https://api.bloom.solutions/api/v1/rates?api_secret=[api_secret]&currency=PHPBTC&partner_id=[api_token]
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 09 Sep 2016 13:34:14 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"74287763c8de8df7bcdaf565692b08cc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1f9ff820-dce3-48f3-a8ab-d7781d137c66
+      X-Runtime:
+      - '0.033375'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '3.453939680486874e-05'
+    http_version: 
+  recorded_at: Fri, 09 Sep 2016 13:34:14 GMT
+- request:
+    method: get
+    uri: https://api.bloom.solutions/api/v1/rates?api_secret=[api_secret]&currency=invalid&partner_id=[api_token]
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 09 Sep 2016 13:34:15 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"37a6259cc0c1dae299a7866489dff0bd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fee8f295-27f3-44b8-9530-014eef8ee048
+      X-Runtime:
+      - '0.048422'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: 'null'
+    http_version: 
+  recorded_at: Fri, 09 Sep 2016 13:34:15 GMT
+recorded_with: VCR 3.0.3
