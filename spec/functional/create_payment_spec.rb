@@ -3,7 +3,8 @@ require 'spec_helper'
 RSpec.describe "Create payment" do
 
   it "Pay for a bill", vcr: {record: :once} do
-    client = BloomRemitClient.new(CONFIG.slice(*%i[token secret agent_id url]))
+    config = CONFIG.slice(*%i[api_token api_secret agent_id])
+    client = BloomRemitClient.new(config)
 
     sender_response = client.create_sender(
       first_name: "Luis",
@@ -29,7 +30,8 @@ RSpec.describe "Create payment" do
       orig_currency: "KRW",
       paid_in_orig_currency: 15000,
       payout_method: biller.slug,
-      receivable_in_dest_currency: 500
+      receivable_in_dest_currency: 500,
+      external_id: SecureRandom.hex(12),
     )
     expect(payment_response).to be_success
   end

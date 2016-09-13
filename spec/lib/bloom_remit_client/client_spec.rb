@@ -5,17 +5,13 @@ module BloomRemitClient
 
     describe "attributes" do
       subject { described_class }
-      it { is_expected.to have_attribute(:token, String) }
-      it { is_expected.to have_attribute(:secret, String) }
-      it { is_expected.to have_attribute(:agent_id, String) }
-      it { is_expected.to have_attribute(:url, String) }
+      it { is_expected.to have_attribute(:api_token, String) }
+      it { is_expected.to have_attribute(:api_secret, String) }
     end
 
     describe "validations" do
-      it { is_expected.to validate_presence_of(:token) }
-      it { is_expected.to validate_presence_of(:secret) }
-      it { is_expected.to validate_presence_of(:agent_id) }
-      it { is_expected.to validate_presence_of(:url) }
+      it { is_expected.to validate_presence_of(:api_token) }
+      it { is_expected.to validate_presence_of(:api_secret) }
     end
 
   end

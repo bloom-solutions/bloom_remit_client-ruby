@@ -57,6 +57,14 @@ module BloomRemitClient
       Responses::Senders::Create.new(raw_response: raw_response)
     end
 
+    def create_payment(payment_params={})
+      params = {payment: payment_params}.
+        merge(sender_id: payment_params[:sender_id])
+      request_params = params.merge(default_params).merge(access_params)
+      raw_response = Requests::Payments::Create.new(request_params).()
+      Responses::Payments::Create.new(raw_response: raw_response)
+    end
+
     private
 
     # Should overwrite any other `:api_token`, `:api_secret`
