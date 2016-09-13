@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bloom.solutions/api/v1/partners/[api_token]/credits?api_secret=[api_secret]
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 09 Sep 2016 13:51:13 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bdf2e04e33289fea2fb45ab0cf892763"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dcb97f76-b305-4d94-a28b-5885b784cb38
+      X-Runtime:
+      - '0.086041'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"address":"19NqqCn2EyZRFnyi1XwPLzQwM4HNgTnAuw","timestamp_ph":"2016-09-09T21:51:13.928+08:00","rates":{"btcusd":633.97728,"btcaud":805.494625,"btcphp":28948.722065,"btckrw":674935.759359}}'
+    http_version: 
+  recorded_at: Fri, 09 Sep 2016 13:51:14 GMT
+recorded_with: VCR 3.0.3
