@@ -1,7 +1,7 @@
 module BloomRemitClient
   module Requests
     module Senders
-      class Create < BaseRequest
+      class Create < Base
 
         PATH = "/api/v1/partners/:token/senders.json"
 

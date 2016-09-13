@@ -1,5 +1,5 @@
 module BloomRemitClient
-  class CreatePaymentRequest < BaseRequest
+  class CreatePaymentRequest < Base
 
     PATH = "/api/v2/payments.json"
 

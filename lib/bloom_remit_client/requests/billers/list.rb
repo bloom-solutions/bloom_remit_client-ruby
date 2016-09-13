@@ -1,7 +1,7 @@
 module BloomRemitClient
   module Requests
     module Billers
-      class List < BaseRequest
+      class List < Base
 
         PATH = "/api/v2/billers.json"
 

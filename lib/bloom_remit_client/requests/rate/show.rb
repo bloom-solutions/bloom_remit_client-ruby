@@ -2,7 +2,7 @@
 module BloomRemitClient
   module Requests
     module Rate
-      class Show < Requests::BaseRequest
+      class Show < Requests::Base
         PATH = '/api/v1/rates'
 
         attribute :currency, String

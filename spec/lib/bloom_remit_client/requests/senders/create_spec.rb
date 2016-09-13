@@ -5,8 +5,8 @@ module BloomRemitClient
     module Senders
       RSpec.describe Create, type: %i[model virtus] do
 
-        it "inherits from BaseRequest" do
-          expect(described_class < BaseRequest).to be true
+        it "inherits from Base" do
+          expect(described_class < Base).to be true
         end
 
         describe "attributes" do

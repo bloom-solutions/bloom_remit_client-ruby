@@ -2,7 +2,7 @@
 module BloomRemitClient
   module Requests
     module Credit
-      class History < Requests::BaseRequest
+      class History < Requests::Base
         private
 
         def type

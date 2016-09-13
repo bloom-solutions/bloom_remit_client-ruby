@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 module BloomRemitClient
   module Requests
-    class BaseRequest
+    class Base
       include Virtus.model
       include ActiveModel::Validations
       include Concerns::HasBaseAuthentification

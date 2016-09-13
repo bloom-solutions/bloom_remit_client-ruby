@@ -2,7 +2,7 @@
 module BloomRemitClient
   module Requests
     module Credit
-      class List < Requests::BaseRequest
+      class List < Requests::Base
         private
 
         def type

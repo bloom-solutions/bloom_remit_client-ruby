@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module BloomRemitClient
-  RSpec.describe BaseRequest, type: %i[model virtus] do
+  RSpec.describe Base, type: %i[model virtus] do
 
     describe "attributes" do
       subject { described_class }

@@ -9,8 +9,8 @@ module BloomRemitClient
       it { is_expected.to have_attribute(:sender_id, String) }
     end
 
-    it "inherits from BaseRequest" do
-      expect(described_class < BaseRequest).to be true
+    it "inherits from Base" do
+      expect(described_class < Base).to be true
     end
 
     describe "#path" do
