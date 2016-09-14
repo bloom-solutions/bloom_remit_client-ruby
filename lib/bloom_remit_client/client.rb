@@ -73,6 +73,15 @@ module BloomRemitClient
       Responses::Recipients::Create.new(raw_response: raw_response)
     end
 
+    def create_remittance(remittance_params={})
+      params = {remittance: remittance_params}.
+        merge(sender_id: remittance_params[:sender_id]).
+        merge(recipient_id: remittance_params[:recipient_id])
+      request_params = params.merge(default_params).merge(access_params)
+      raw_response = Requests::Remittances::Create.new(request_params).()
+      Responses::Remittances::Create.new(raw_response: raw_response)
+    end
+
     private
 
     # Should overwrite any other `:api_token`, `:api_secret`
