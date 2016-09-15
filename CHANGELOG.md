@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Default to staging URL
 
+### Fixed
+- Make more threadsafe by passing host into client instantiation
+
 ## [0.5.0] - 2016-09-15
 ### Changed
 - Structure of files to more easily add new endpoints
