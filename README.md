@@ -34,7 +34,7 @@ To make testing easier, you may `require 'bloom_remit_client/factories'` in your
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/imacchiato/bloom_remit_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on [GitHub](https://github.com/imacchiato/bloom_remit_client-ruby). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
