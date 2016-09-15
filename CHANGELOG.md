@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - `rates` endpoint
+- Add method to create remittances
 
 ## [0.4.0] - 2016-09-01
 ### Added
