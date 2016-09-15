@@ -42,8 +42,10 @@ module BloomRemitClient
     attr_accessor :sandbox
     attr_writer :host
 
-    def new(*args)
-      client = Client.new(*args)
+    def new(args)
+      client_args = args
+      client_args[:host] ||= self.host
+      client = Client.new(client_args)
       raise ArgumentError, client.errors.full_messages if client.invalid?
       client
     end

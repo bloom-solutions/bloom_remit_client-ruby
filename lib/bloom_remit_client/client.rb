@@ -7,8 +7,9 @@ module BloomRemitClient
     attribute :api_token, String
     attribute :api_secret, String
     attribute :agent_id, String
+    attribute :host, String
 
-    validates :api_token, :api_secret, presence: true
+    validates :api_token, :api_secret, :host, presence: true
 
     # GET
     # /api/v1/partners/:api_token/credits
@@ -86,7 +87,7 @@ module BloomRemitClient
 
     # Should overwrite any other `:api_token`, `:api_secret`
     def access_params
-      @access_params ||= attributes.slice(:api_token, :api_secret)
+      @access_params ||= attributes.slice(:host, :api_token, :api_secret)
     end
 
     def default_params

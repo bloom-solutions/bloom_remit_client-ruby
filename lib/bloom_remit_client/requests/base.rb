@@ -15,7 +15,7 @@ module BloomRemitClient
           type: type,
           body: body,
           url: {
-            host: ::BloomRemitClient.host,
+            host: host,
             path: path,
             query_params: query_params
           }
