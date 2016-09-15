@@ -50,7 +50,8 @@ module BloomRemitClient
 
     def host
       return @host if @host
-      sandbox ? STAGING : PRODUCTION
+      return STAGING if sandbox.nil? || sandbox
+      PRODUCTION
     end
   end
 end

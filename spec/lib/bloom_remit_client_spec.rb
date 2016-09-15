@@ -24,4 +24,21 @@ RSpec.describe BloomRemitClient do
     end
   end
 
+  describe ".host" do
+    it "is STAGING by default" do
+      described_class.sandbox = nil
+      expect(described_class.host).to eq described_class::STAGING
+    end
+
+    it "is STAGING when sandbox = true" do
+      described_class.sandbox = true
+      expect(described_class.host).to eq described_class::STAGING
+    end
+
+    it "is PRODUCTION when sandbox = false" do
+      described_class.sandbox = false
+      expect(described_class.host).to eq described_class::PRODUCTION
+    end
+  end
+
 end
