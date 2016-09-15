@@ -15,6 +15,29 @@ RSpec.describe BloomRemitClient do
         expect(client.api_secret).to eq "123"
         expect(client.agent_id).to eq "123"
       end
+
+      context "host is not given" do
+        it "defaults :host to BloomRemitClient.host" do
+          client = described_class.new({
+            api_token: "asd",
+            api_secret: "123",
+            agent_id: "123",
+          })
+          expect(client.host).to eq described_class::STAGING
+        end
+      end
+
+      context "host is given" do
+        it "defaults :host to BloomRemitClient.host" do
+          client = described_class.new({
+            api_token: "asd",
+            api_secret: "123",
+            agent_id: "123",
+            host: "abc.com",
+          })
+          expect(client.host).to eq "abc.com"
+        end
+      end
     end
 
     describe "given invalid credentials" do

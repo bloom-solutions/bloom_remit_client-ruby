@@ -7,11 +7,13 @@ module BloomRemitClient
       subject { described_class }
       it { is_expected.to have_attribute(:api_token, String) }
       it { is_expected.to have_attribute(:api_secret, String) }
+      it { is_expected.to have_attribute(:host, String) }
     end
 
     describe "validations" do
       it { is_expected.to validate_presence_of(:api_token) }
       it { is_expected.to validate_presence_of(:api_secret) }
+      it { is_expected.to validate_presence_of(:host) }
     end
 
   end
