@@ -15,52 +15,12 @@ RSpec.describe BloomRemitClient do
         expect(client.api_secret).to eq "123"
         expect(client.agent_id).to eq "123"
       end
-
-      context "host is not given" do
-        it "defaults :host to BloomRemitClient.host" do
-          client = described_class.new({
-            api_token: "asd",
-            api_secret: "123",
-            agent_id: "123",
-          })
-          expect(client.host).to eq described_class::STAGING
-        end
-      end
-
-      context "host is given" do
-        it "defaults :host to BloomRemitClient.host" do
-          client = described_class.new({
-            api_token: "asd",
-            api_secret: "123",
-            agent_id: "123",
-            host: "abc.com",
-          })
-          expect(client.host).to eq "abc.com"
-        end
-      end
     end
 
     describe "given invalid credentials" do
       it "raises an error" do
         expect { described_class.new }.to raise_error(ArgumentError)
       end
-    end
-  end
-
-  describe ".host" do
-    it "is STAGING by default" do
-      described_class.sandbox = nil
-      expect(described_class.host).to eq described_class::STAGING
-    end
-
-    it "is STAGING when sandbox = true" do
-      described_class.sandbox = true
-      expect(described_class.host).to eq described_class::STAGING
-    end
-
-    it "is PRODUCTION when sandbox = false" do
-      described_class.sandbox = false
-      expect(described_class.host).to eq described_class::PRODUCTION
     end
   end
 

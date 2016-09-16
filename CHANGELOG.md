@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Heavy lifting of sandbox and host defaults fall on BloomRemitClient::Client
+- Default sandbox is true. Must set to false to be on production mode
+
 ## [0.6.0] - 2016-09-15
 ### Changed
 - Default to staging URL

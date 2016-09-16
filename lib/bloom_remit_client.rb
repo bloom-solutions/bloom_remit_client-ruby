@@ -39,21 +39,19 @@ module BloomRemitClient
   STAGING = 'bloomremit-staging.herokuapp.com'
 
   class << self
+    attr_accessor :host
     attr_accessor :sandbox
-    attr_writer :host
 
     def new(args)
-      client_args = args
-      client_args[:host] ||= self.host
+      client_args = {}
+      client_args[:host] = self.host if self.host.present?
+      client_args[:sandbox] = self.sandbox if self.sandbox.present?
+      client_args.merge!(args)
+
       client = Client.new(client_args)
       raise ArgumentError, client.errors.full_messages if client.invalid?
       client
     end
 
-    def host
-      return @host if @host
-      return STAGING if sandbox.nil? || sandbox
-      PRODUCTION
-    end
   end
 end

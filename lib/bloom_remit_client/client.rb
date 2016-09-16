@@ -7,9 +7,11 @@ module BloomRemitClient
     attribute :api_token, String
     attribute :api_secret, String
     attribute :agent_id, String
-    attribute :host, String
+    attribute :host, String, lazy: true, default: :default_host
+    attribute :sandbox, Boolean, default: true
 
     validates :api_token, :api_secret, :host, presence: true
+    validates :sandbox, inclusion: {in: [true, false]}
 
     # GET
     # /api/v1/partners/:api_token/credits
@@ -93,5 +95,11 @@ module BloomRemitClient
     def default_params
       @default_params ||= attributes.slice(:agent_id)
     end
+
+    def default_host
+      return BloomRemitClient::STAGING if self.sandbox.nil? || self.sandbox
+      BloomRemitClient::PRODUCTION
+    end
+
   end
 end
