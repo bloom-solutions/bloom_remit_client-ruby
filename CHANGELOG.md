@@ -2,11 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.8.0] - 2016-09-16
 ### Added
 - Add a way to get the deposit strategies. `slug` and `name` for now
 
-## [0.7.1]
+## [0.7.1] - 2016-09-16
 ### Fixed
 - Factory `bloom_remit_client_create_payment_response` renamed to `bloom_remit_client_responses_payments_create`
 
