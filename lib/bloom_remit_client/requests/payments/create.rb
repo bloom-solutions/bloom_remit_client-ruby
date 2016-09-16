@@ -3,6 +3,8 @@ module BloomRemitClient
     module Payments
       class Create < Base
 
+        include Concerns::HasBaseAuthentification
+
         PATH = "/api/v2/payments.json"
 
         attribute :payment, Hash

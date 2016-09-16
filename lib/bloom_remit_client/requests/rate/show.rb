@@ -3,6 +3,9 @@ module BloomRemitClient
   module Requests
     module Rate
       class Show < Requests::Base
+
+        include Concerns::HasBaseAuthentification
+
         PATH = '/api/v1/rates'
 
         attribute :currency, String
