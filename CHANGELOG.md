@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.7.1]
 ### Fixed
 - Factory `bloom_remit_client_create_payment_response` renamed to `bloom_remit_client_responses_payments_create`
 
