@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Factory `bloom_remit_client_deposit_strategy`
+
 ## [0.8.0] - 2016-09-16
 ### Added
 - Add a way to get the deposit strategies. `slug` and `name` for now

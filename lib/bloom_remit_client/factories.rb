@@ -10,6 +10,13 @@ FactoryGirl.define do
     second_field_width 50
   end
 
+  factory(:bloom_remit_client_deposit_strategy, {
+    class: "BloomRemitClient::DepositStrategy",
+  }) do
+    sequence(:slug) {|n| "deposit_strategy_#{n}" }
+    name "Deposit Strategy"
+  end
+
   factory(:bloom_remit_client_responses_payments_create, {
     class: "BloomRemitClient::Responses::Payments::Create",
   }) do
