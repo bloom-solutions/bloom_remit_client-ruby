@@ -4,10 +4,16 @@ module BloomRemitClient
     class Base
       include Virtus.model
       include ActiveModel::Validations
-      include Concerns::HasBaseAuthentification
+      attribute :host, String
+      validates :host, presence: true
 
       def call
         RequestsSender.new(params).()
+      end
+
+      def call!
+        fail(ArgumentError, self.errors.full_messages) if self.invalid?
+        call
       end
 
       def params

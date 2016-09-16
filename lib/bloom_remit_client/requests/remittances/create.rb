@@ -3,6 +3,8 @@ module BloomRemitClient
     module Remittances
       class Create < Base
 
+        include Concerns::HasBaseAuthentification
+
         PATH = "/api/v1//partners/:api_token/senders/:sender_id/remittances.json"
 
         attribute :remittance, Hash

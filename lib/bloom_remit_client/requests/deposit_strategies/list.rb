@@ -1,11 +1,9 @@
 module BloomRemitClient
   module Requests
-    module Billers
+    module DepositStrategies
       class List < Base
 
-        include Concerns::HasBaseAuthentification
-
-        PATH = "/api/v2/billers.json"
+        PATH = "/api/v1/strategies.json"
 
         private
 

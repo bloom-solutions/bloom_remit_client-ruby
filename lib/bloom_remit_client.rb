@@ -10,6 +10,7 @@ require 'bloom_remit_client/concerns/has_base_authentification'
 require "bloom_remit_client/version"
 require "bloom_remit_client/client"
 require "bloom_remit_client/models/biller"
+require "bloom_remit_client/models/deposit_strategy"
 require "bloom_remit_client/models/user"
 require "bloom_remit_client/models/payment"
 require "bloom_remit_client/models/remittance"
@@ -23,12 +24,14 @@ require "bloom_remit_client/requests/credit/list"
 require "bloom_remit_client/requests/credit/history"
 require "bloom_remit_client/requests/rate/show"
 require "bloom_remit_client/requests/billers/list"
+require "bloom_remit_client/requests/deposit_strategies/list"
 require "bloom_remit_client/requests/senders/create"
 require "bloom_remit_client/requests/payments/create"
 require "bloom_remit_client/requests/remittances/create"
 require "bloom_remit_client/requests/recipients/create"
 require "bloom_remit_client/responses/base"
 require "bloom_remit_client/responses/billers/list"
+require "bloom_remit_client/responses/deposit_strategies/list"
 require "bloom_remit_client/responses/senders/create"
 require "bloom_remit_client/responses/payments/create"
 require "bloom_remit_client/responses/remittances/create"
@@ -42,7 +45,7 @@ module BloomRemitClient
     attr_accessor :host
     attr_accessor :sandbox
 
-    def new(args)
+    def new(args={})
       client_args = {}
       client_args[:host] = self.host if self.host.present?
       client_args[:sandbox] = self.sandbox if self.sandbox.present?

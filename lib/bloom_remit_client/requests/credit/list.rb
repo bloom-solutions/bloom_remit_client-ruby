@@ -3,6 +3,8 @@ module BloomRemitClient
   module Requests
     module Credit
       class List < Requests::Base
+        include Concerns::HasBaseAuthentification
+
         private
 
         def type

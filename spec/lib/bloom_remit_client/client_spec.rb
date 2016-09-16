@@ -15,8 +15,6 @@ module BloomRemitClient
     end
 
     describe "validations" do
-      it { is_expected.to validate_presence_of(:api_token) }
-      it { is_expected.to validate_presence_of(:api_secret) }
       it { is_expected.to validate_presence_of(:host) }
     end
 

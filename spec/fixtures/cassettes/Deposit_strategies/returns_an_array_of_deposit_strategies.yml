@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/strategies.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 16 Sep 2016 03:24:57 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b32d82b69fb81d70f7694b8595ea4a35"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f221c75a-dd5b-4d3e-9a1c-e992eb9b9c79
+      X-Runtime:
+      - '0.024658'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"slug":"CLH","active":true,"payout_partner_slug":"easyph","wait_time":"instant","support_line":"","sameday_cutoff":61200,"fees":[[50000,0]],"fixed":false,"maximum":50000,"availability":"1..7","default_aggregator_slug":"easyph","aggregator_slug":["easyph"],"country":"PH","name":"Cebuana
+        Lhuillier","currency":"PHP","regex":false,"regex_format":"","category":"pickup","branches":"http://branchlocatormap.cebuanalhuillierservices.com/BranchLocatorMap.aspx?argVal=\u0026arguments=","payout_email":""},{"slug":"MLH","active":true,"payout_partner_slug":"easyph","wait_time":"instant","support_line":"","sameday_cutoff":61200,"fees":[[50000,0]],"fixed":false,"maximum":50000,"availability":"1..7","default_aggregator_slug":"easyph","aggregator_slug":["easyph"],"country":"PH","name":"M.
+        Lhuillier","currency":"PHP","regex":false,"regex_format":"","category":"pickup","branches":"http://www.mlhuillier.com/branches/","payout_email":""},{"slug":"AUB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6326386888","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Asia
+        United Bank","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"https://www.aub.com.ph/branch","payout_email":""},{"slug":"BOC","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6329826000","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Bank
+        of Commerce","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"https://www.bankcom.com.ph/brnch.php","payout_email":""},{"slug":"BDO","active":true,"payout_partner_slug":"bloom_qc","wait_time":"6-8
+        hours","support_line":"+6326318000","sameday_cutoff":50400,"fees":[[200000,0]],"fixed":true,"maximum":5000000,"availability":"1..5","default_aggregator_slug":"bloom_qc","aggregator_slug":["bloom_qc"],"country":"PH","name":"BDO","currency":"PHP","regex":"(?-mix:^[0-9]{10,12}$)","regex_format":"10-12
+        digits long with no spaces","category":"bank","branches":"https://www.bdo.com.ph/branches-atms-locator","payout_email":"justin@bloom.solutions,
+        jesusndavid@yahoo.com.ph, marcbisquera0526@gmail.com"},{"slug":"BDOI","active":true,"payout_partner_slug":"easyph","wait_time":"instant","support_line":"+6326318000","sameday_cutoff":46800,"fees":[[400000,0]],"fixed":true,"maximum":5000000,"availability":"1..5","default_aggregator_slug":"easyph","aggregator_slug":["easyph"],"country":"PH","name":"BDO
+        (Instant)","currency":"PHP","regex":"(?-mix:^[0-9]{10,12}$)","regex_format":"10-12
+        digits long with no spaces","category":"bank","branches":"https://www.bdo.com.ph/branches-atms-locator","payout_email":""},{"slug":"BPI","active":true,"payout_partner_slug":"bloom_qc","wait_time":"6-8
+        hours","support_line":"+6328910000","sameday_cutoff":46800,"fees":[[200000,0]],"fixed":true,"maximum":200000,"availability":"1..5","default_aggregator_slug":"bloom_qc","aggregator_slug":["bloom_qc"],"country":"PH","name":"BPI","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"https://info.bpiexpressonline.com/bpiprod/prodserv.nsf/Pop-Ups/BranchesSearch","payout_email":"justin@bloom.solutions,
+        jesusndavid@yahoo.com.ph, marcbisquera0526@gmail.com"},{"slug":"BPIFS","active":true,"payout_partner_slug":"bloom_qc","wait_time":"6-8
+        hours","support_line":"","sameday_cutoff":46800,"fees":[[200000,0]],"fixed":true,"maximum":200000,"availability":"1..5","default_aggregator_slug":"bloom_qc","aggregator_slug":["bloom_qc"],"country":"PH","name":"BPI
+        Family Savings","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"","payout_email":"justin@bloom.solutions,
+        jesusndavid@yahoo.com.ph, marcbisquera0526@gmail.com"},{"slug":"CBC","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328855888","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","easyph","bloom_qc"],"country":"PH","name":"Chinabank","currency":"PHP","regex":"(?-mix:^[0-9]{10,12}$)","regex_format":"10
+        or 12 digits long with no spaces","category":"bank","branches":"https://www.chinabank.ph/locate_branch_atm.aspx","payout_email":""},{"slug":"CBS","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6329889555","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","easyph","bloom_qc"],"country":"PH","name":"Chinabank
+        Savings","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"https://www.chinabank.ph/locate_branch_atm.aspx","payout_email":""},{"slug":"CTB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6329959999","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Citibank","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"https://www.citibank.com.ph/gcb/deposits/depotransition_branches.htm","payout_email":""},{"slug":"CSI","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6329959999","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Citibank
+        Savings","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"https://www.citibank.com.ph/gcb/deposits/depotransition_branches.htm","payout_email":""},{"slug":"DBP","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328189511","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"DBP","currency":"PHP","regex":"(?-mix:^[0-9]{10,13}$)","regex_format":"10-13
+        digits long with no spaces","category":"bank","branches":"https://www.devbnkphl.com/about.php?cat=62","payout_email":""},{"slug":"EWB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328881700","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"EastWest
+        Bank","currency":"PHP","regex":null,"regex_format":"12 digits long with no
+        spaces","category":"bank","branches":"https://www.eastwestbanker.com/tool/branch_list.asp","payout_email":"","format_process":["Add
+        leading zeros to complete the required length of 12"]},{"slug":"EQB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6322415952","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Equicom
+        Savings Bank","currency":"PHP","regex":"(?-mix:^[0-9]{14}$)","regex_format":"14
+        digits long with no spaces","category":"bank","branches":"https://www.equicomsavings.com/list-of-branches","payout_email":""},{"slug":"HSB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6329768000","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"HSBC","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"https://www.hsbc.com.ph/1/2/feedback","payout_email":""},{"slug":"HBP","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6329768000","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"HSBC
+        Savings","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"https://www.hsbc.com.ph/1/2/feedback","payout_email":""},{"slug":"LBP","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6325512200","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Landbank","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"https://www.landbank.com/branch-atm-locator?qt-locator=1","payout_email":""},{"slug":"LBC","active":true,"payout_partner_slug":"lbc","wait_time":"6-8
+        hours","support_line":"+6325512200","sameday_cutoff":28800,"fees":[[100,6],[200,15],[300,20],[400,25],[500,30],[600,35],[700,40],[800,45],[1000,50],[1600,75],[2100,100],[2600,125],[3100,150],[4100,180],[8900,220],[9100,270],[9400,280],[9700,290],[10100,300],[11100,330],[12100,360],[13100,390],[14100,420],[15100,450],[16100,480],[17100,510],[18100,540],[19100,570],[20100,600],[21100,630],[22100,660],[23100,690],[24100,720],[25100,750],[27400,820],[30100,900],[40100,1200],[50000,1500],[60000,1800],[70000,2100],[75000,2400]],"fixed":false,"maximum":75000,"availability":"1..7","default_aggregator_slug":"lbc","aggregator_slug":["lbc"],"country":"PH","name":"LBC","currency":"PHP","regex":false,"regex_format":"","category":"pickup","branches":"http://www.lbcexpress.com/Default.aspx","payout_email":""},{"slug":"LBCP","active":true,"payout_partner_slug":"lbc","wait_time":"24
+        hours","support_line":"+6325512200","sameday_cutoff":28800,"fees":[[500,59],[1000,80],[2000,200],[3000,300],[5000,370],[7500,450],[10000,500],[19999,750],[29999,1000],[39999,1500],[49999,2000],[59999,2500],[69999,3000],[75000,3500]],"fixed":false,"maximum":75000,"availability":"1..5","default_aggregator_slug":"lbc","aggregator_slug":["lbc"],"country":"PH","name":"LBC
+        Door-to-Door","currency":"PHP","regex":false,"regex_format":"","category":"pickup","branches":"http://www.lbcexpress.com/Default.aspx","payout_email":""},{"slug":"MSB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328140884","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Malayan
+        Bank","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12 digits
+        long with no spaces","category":"bank","branches":"https://www.malayanbank.com/branches/","payout_email":""},{"slug":"MPI","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6325883777","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Maybank","currency":"PHP","regex":"(?-mix:^[0-9]{11}$)","regex_format":"11
+        digits long with no spaces","category":"bank","branches":"https://www.maybank.com.ph/en/customer-service/find-a-maybank-near-you.page?","payout_email":""},{"slug":"MET","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328700700","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Metrobank","currency":"PHP","regex":null,"regex_format":"13
+        digits long with no spaces","category":"bank","branches":"https://www.metrobank.com.ph/locate_atm.asp","payout_email":"","format_process":["Remove
+        all hyphens","Requires account number to be 13 digits (regex: (?-mix:^[0-9]{13}$))"]},{"slug":"PNB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6325738888","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Philippine
+        National Bank","currency":"PHP","regex":"(?-mix:^[0-9]{10,12}$)","regex_format":"10
+        or 12 digits long with no spaces","category":"bank","branches":"https://www.pnb.com.ph/index.php/global-directory/pnb-domestic-branches","payout_email":""},{"slug":"ALL","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6325738888","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":200000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"PNB-Allied
+        Bank","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10 digits
+        long with no spaces","category":"bank","branches":"https://www.alliedbank.com.ph/branches.php","payout_email":""},{"slug":"ASB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6325738888","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":200000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"PNB-Allied
+        Savings Bank","currency":"PHP","regex":"(?-mix:^[0-9]{10}$)","regex_format":"10
+        digits long with no spaces","category":"bank","branches":"https://www.alliedbank.com.ph/branches.php","payout_email":""},{"slug":"PSB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328458888","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Philippine
+        Savings Bank","currency":"PHP","regex":null,"regex_format":"12 digits long
+        with no spaces","category":"bank","branches":"https://www.psbank.com.ph/branch","payout_email":"","format_process":["Add
+        leading zeros to complete the required length of 12"]},{"slug":"PVB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328402621","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Philippine
+        Veterans Bank","currency":"PHP","regex":"(?-mix:^[0-9]{13}$)","regex_format":"13
+        digits long with no spaces","category":"bank","branches":"https://www.veteransbank.com.ph/branch_metromanila.html","payout_email":""},{"slug":"RCB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328777222","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"RCBC","currency":"PHP","regex":"(?-mix:^[0-9]{16}$)","regex_format":"16
+        digits long with no spaces","category":"bank","branches":"https://www.rcbc.com/rcbc_network_branch.php","payout_email":""},{"slug":"RSB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6325558772","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"RCBC
+        Savings","currency":"PHP","regex":"(?-mix:^[0-9]{16}$)","regex_format":"16
+        digits long with no spaces","category":"bank","branches":"https://www.rcbcsavings.com/?p=39","payout_email":""},{"slug":"SEC","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328879188","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Security
+        Bank","currency":"PHP","regex":null,"regex_format":"13 digits long with no
+        spaces","category":"bank","branches":"https://www.securitybank.com/map/","payout_email":"","format_process":["Requires
+        account number to be 13 digits (regex: (?-mix:^[0-9]{13}$))"]},{"slug":"SBS","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328879188","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Security
+        Savings Bank","currency":"PHP","regex":"(?-mix:^[0-9]{13}$)","regex_format":"14
+        digits long with no spaces","category":"bank","branches":"https://www.securitybank.com/map/","payout_email":""},{"slug":"SCB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328301111","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Standard
+        Chartered Bank","currency":"PHP","regex":"(?-mix:^[0-9]{11}$)","regex_format":"11
+        digits long with no spaces","category":"bank","branches":"https://www.sc.com/ph/branch-directory/en/","payout_email":""},{"slug":"SBA","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6327216000","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Sterling
+        Bank","currency":"PHP","regex":"(?-mix:^[0-9]{12,16}$)","regex_format":"12-16
+        digits long with no spaces","category":"bank","branches":"https://www.sterlingbankasia.com/Branches.aspx","payout_email":""},{"slug":"TYB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328453838","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"Tong
+        Yang Bank","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"http://www.tongyang.com.ph/en/aboutus.htm","payout_email":""},{"slug":"UBP","active":true,"payout_partner_slug":"dragonpay","wait_time":"6-8
+        hours","support_line":"+6328418600","sameday_cutoff":46800,"fees":[[10000,15]],"fixed":true,"maximum":200000,"availability":"1..5","default_aggregator_slug":"dragonpay","aggregator_slug":["dragonpay","bloom_qc"],"country":"PH","name":"Unionbank","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"https://www.unionbankph.com/index.php?option=com_content\u0026view=article\u0026id=1043\u0026Itemid=505","payout_email":""},{"slug":"UCPB","active":true,"payout_partner_slug":"dragonpay","wait_time":"6-8
+        hours","support_line":"+6328119111","sameday_cutoff":46800,"fees":[[10000,15]],"fixed":true,"maximum":10000,"availability":"1..5","default_aggregator_slug":"dragonpay","aggregator_slug":["dragonpay","bloom_qc"],"country":"PH","name":"UCPB","currency":"PHP","regex":"(?-mix:^[0-9]{12}$)","regex_format":"12
+        digits long with no spaces","category":"bank","branches":"https://www.ucpb.com/lzBlank_Network_index.php","payout_email":""},{"slug":"USB","active":true,"payout_partner_slug":"paynamics","wait_time":"instant","support_line":"+6328119111","sameday_cutoff":86340,"fees":[[400000,100]],"fixed":true,"maximum":500000,"availability":"1..7","default_aggregator_slug":"paynamics","aggregator_slug":["paynamics","bloom_qc"],"country":"PH","name":"UCPB
+        Savings","currency":"PHP","regex":"(?-mix:^[0-9]{11}$)","regex_format":"11
+        digits long with no spaces","category":"bank","branches":"https://www.ucpb.com/lzBlank_Network_index.php","payout_email":""},{"slug":"BSB","active":true,"payout_partner_slug":"bloom_au","wait_time":"24
+        hours","support_line":"+63 2 843-3841","sameday_cutoff":46800,"fees":[[400000,50]],"fixed":true,"maximum":1000000,"availability":"1..5","default_aggregator_slug":"bloom_au","aggregator_slug":["bloom_au"],"country":"AU","name":"All
+        Australian Banks","currency":"AUD","regex":"(?-mix:^[0-9]{6}\\-[0-9]{6,10}$)","regex_format":"6-digit
+        BSB, a hyphen, and 6 to 10-digit account number","category":"bank","branches":"https://www.bloom.solutions","payout_email":"justin@bloom.solutions"},{"slug":"ACB","active":true,"payout_partner_slug":"easy","wait_time":"24
+        hours","support_line":"+63 2 843-3841","sameday_cutoff":46800,"fees":[[400000,50]],"fixed":true,"maximum":1000000,"availability":"1..5","default_aggregator_slug":"easy","aggregator_slug":["easy"],"country":"CA","name":"All
+        Canadian Banks","currency":"CAD","regex":false,"regex_format":"","category":"bank","branches":"https://www.bloom.solutions","payout_email":""}]'
+    http_version: 
+  recorded_at: Fri, 16 Sep 2016 03:24:59 GMT
+recorded_with: VCR 3.0.3

@@ -10,7 +10,7 @@ module BloomRemitClient
     attribute :host, String, lazy: true, default: :default_host
     attribute :sandbox, Boolean, default: true
 
-    validates :api_token, :api_secret, :host, presence: true
+    validates :host, presence: true
     validates :sandbox, inclusion: {in: [true, false]}
 
     # GET
@@ -18,7 +18,8 @@ module BloomRemitClient
     # Parameters: none
     def credits(params = {})
       request_params = params.merge(access_params)
-      Requests::Credit::List.new(request_params).()
+      request = Requests::Credit::List.new(request_params)
+      request.call!
     end
 
     # GET
@@ -26,7 +27,8 @@ module BloomRemitClient
     # Parameters: none
     def credits_history(params = {})
       request_params = params.merge(access_params)
-      Requests::Credit::History.new(request_params).()
+      request = Requests::Credit::History.new(request_params)
+      request.call!
     end
 
     # GET
@@ -44,19 +46,22 @@ module BloomRemitClient
     #     optional
     def rates(params = {})
       request_params = params.merge(access_params)
-      Requests::Rate::Show.new(request_params).()
+      request = Requests::Rate::Show.new(request_params)
+      request.call!
     end
 
     def billers(params={})
       request_params = params.merge(access_params)
-      raw_response = Requests::Billers::List.new(request_params).()
+      request = Requests::Billers::List.new(request_params)
+      raw_response = request.call!
       Responses::Billers::List.new(raw_response: raw_response)
     end
 
     def create_sender(sender_params={})
       params = {sender: sender_params}
       request_params = params.merge(default_params).merge(access_params)
-      raw_response = Requests::Senders::Create.new(request_params).()
+      request = Requests::Senders::Create.new(request_params)
+      raw_response = request.call!
       Responses::Senders::Create.new(raw_response: raw_response)
     end
 
@@ -64,7 +69,8 @@ module BloomRemitClient
       params = {payment: payment_params}.
         merge(sender_id: payment_params[:sender_id])
       request_params = params.merge(default_params).merge(access_params)
-      raw_response = Requests::Payments::Create.new(request_params).()
+      request = Requests::Payments::Create.new(request_params)
+      raw_response = request.call!
       Responses::Payments::Create.new(raw_response: raw_response)
     end
 
@@ -72,7 +78,8 @@ module BloomRemitClient
       params = {recipient: recipient_params}.
         merge(sender_id: recipient_params[:sender_id])
       request_params = params.merge(default_params).merge(access_params)
-      raw_response = Requests::Recipients::Create.new(request_params).()
+      request = Requests::Recipients::Create.new(request_params)
+      raw_response = request.call!
       Responses::Recipients::Create.new(raw_response: raw_response)
     end
 
@@ -81,8 +88,16 @@ module BloomRemitClient
         merge(sender_id: remittance_params[:sender_id]).
         merge(recipient_id: remittance_params[:recipient_id])
       request_params = params.merge(default_params).merge(access_params)
-      raw_response = Requests::Remittances::Create.new(request_params).()
+      request = Requests::Remittances::Create.new(request_params)
+      raw_response = request.call!
       Responses::Remittances::Create.new(raw_response: raw_response)
+    end
+
+    def deposit_strategies_list
+      request_params = access_params
+      request = Requests::DepositStrategies::List.new(request_params)
+      raw_response = request.call!
+      Responses::DepositStrategies::List.new(raw_response: raw_response)
     end
 
     private

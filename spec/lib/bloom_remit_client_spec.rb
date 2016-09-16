@@ -19,7 +19,7 @@ RSpec.describe BloomRemitClient do
 
     describe "given invalid credentials" do
       it "raises an error" do
-        expect { described_class.new }.to raise_error(ArgumentError)
+        expect { described_class.new(host: nil) }.to raise_error(ArgumentError)
       end
     end
   end

@@ -3,6 +3,8 @@ module BloomRemitClient
   module Requests
     module Credit
       class History < Requests::Base
+        include Concerns::HasBaseAuthentification
+
         private
 
         def type

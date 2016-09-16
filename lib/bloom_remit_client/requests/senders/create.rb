@@ -3,6 +3,8 @@ module BloomRemitClient
     module Senders
       class Create < Base
 
+        include Concerns::HasBaseAuthentification
+
         PATH = "/api/v1/partners/:token/senders.json"
 
         attribute :sender, Hash
