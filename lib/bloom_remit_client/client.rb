@@ -93,6 +93,13 @@ module BloomRemitClient
       Responses::Remittances::Create.new(raw_response: raw_response)
     end
 
+    def calculate_remittance(calculate_params={})
+      params = access_params.merge(calculate_params)
+      request = Requests::Remittances::Calculate.new(params)
+      raw_response = request.call!
+      Responses::Remittances::Calculate.new(raw_response: raw_response)
+    end
+
     def deposit_strategies_list
       request_params = access_params
       request = Requests::DepositStrategies::List.new(request_params)
