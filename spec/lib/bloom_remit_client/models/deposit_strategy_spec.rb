@@ -7,6 +7,7 @@ module BloomRemitClient
       subject { described_class }
       it { is_expected.to have_attribute(:slug, String) }
       it { is_expected.to have_attribute(:name, String) }
+      it { is_expected.to have_attribute(:category, String) }
     end
 
   end

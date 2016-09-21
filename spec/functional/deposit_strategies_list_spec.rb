@@ -9,9 +9,10 @@ RSpec.describe "Deposit strategies" do
 
     expect(response).to be_success
     deposit_strategies = response.deposit_strategies
-    deposit_strategy = deposit_strategies.first
+    deposit_strategy = deposit_strategies.sample
     expect(deposit_strategy.slug).to be_a String
     expect(deposit_strategy.name).to be_a String
+    expect(%w(bank pickup)).to include(deposit_strategy.category)
   end
 
 end

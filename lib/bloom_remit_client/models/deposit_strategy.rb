@@ -4,6 +4,7 @@ module BloomRemitClient
     include Virtus.model
     attribute :slug, String
     attribute :name, String
+    attribute :category, String
 
   end
 end

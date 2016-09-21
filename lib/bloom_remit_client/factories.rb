@@ -15,6 +15,7 @@ FactoryGirl.define do
   }) do
     sequence(:slug) {|n| "deposit_strategy_#{n}" }
     name "Deposit Strategy"
+    category "bank"
   end
 
   factory(:bloom_remit_client_responses_payments_create, {
