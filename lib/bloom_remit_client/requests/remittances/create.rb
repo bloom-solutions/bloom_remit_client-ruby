@@ -1,21 +1,20 @@
+# frozen_string_literal: true
 module BloomRemitClient
   module Requests
     module Remittances
       class Create < Base
-
         include Concerns::HasBaseAuthentification
-
-        PATH = "/api/v1//partners/:api_token/senders/:sender_id/remittances.json"
+        PATH = '/api/v1/partners/:api_token/senders/:sender_id/remittances'
 
         attribute :remittance, Hash
         attribute :sender_id, String
         attribute :recipient_id, String
+        attribute :agent_id, String
 
         private
 
         def path
-          PATH.gsub(":api_token", self.api_token).
-            gsub(":sender_id", self.sender_id)
+          Requests.normalize_path(PATH, attributes.slice(:api_token, :sender_id))
         end
 
         def type
@@ -23,9 +22,8 @@ module BloomRemitClient
         end
 
         def body_params
-          attributes.slice(*%i[recipient_id remittance])
+          attributes.slice(:agent_id, :recipient_id, :remittance)
         end
-
       end
     end
   end
