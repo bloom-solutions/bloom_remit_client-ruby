@@ -3,6 +3,7 @@ require 'bloom_remit_client'
 require 'pathname'
 require 'yaml'
 require 'pry'
+require 'faker'
 
 SPEC_DIR = Pathname.new(File.dirname(__FILE__))
 
