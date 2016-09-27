@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe "Calculate remittance" do
 
   it "gets the costs of a remittance", vcr: {record: :once} do
-    config = CONFIG.slice(*%i[api_token api_secret agent_id])
+    config = CONFIG.slice(*%i[api_token api_secret agent_id sandbox])
     client = BloomRemitClient.new(config)
 
     deposit_strategy = client.deposit_strategies_list.

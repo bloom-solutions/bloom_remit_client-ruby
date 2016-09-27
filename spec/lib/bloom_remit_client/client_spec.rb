@@ -10,7 +10,7 @@ module BloomRemitClient
       it { is_expected.to have_attribute(:host, String) }
       it do
         is_expected.to have_attribute(:sandbox). # Boolean
-          with_default(true)
+          with_default(false)
       end
     end
 
@@ -29,7 +29,7 @@ module BloomRemitClient
 
       context "sandbox is not set" do
         let(:sandbox) { nil }
-        it { is_expected.to eq BloomRemitClient::STAGING }
+        it { is_expected.to eq BloomRemitClient::PRODUCTION }
       end
 
       context "sandbox is false" do

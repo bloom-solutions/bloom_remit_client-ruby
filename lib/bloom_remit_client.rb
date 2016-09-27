@@ -47,16 +47,16 @@ module BloomRemitClient
     attr_accessor :host
     attr_accessor :sandbox
 
-    def new(args={})
-      client_args = {}
-      client_args[:host] = self.host if self.host.present?
-      client_args[:sandbox] = self.sandbox if self.sandbox.present?
-      client_args.merge!(args)
-
-      client = Client.new(client_args)
+    def new(args = {})
+      client = Client.new(default_args.merge(args))
       raise ArgumentError, client.errors.full_messages if client.invalid?
       client
     end
 
+    private
+
+    def default_args
+      { sandbox: sandbox }
+    end
   end
 end

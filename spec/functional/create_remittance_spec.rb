@@ -5,7 +5,7 @@ RSpec.describe "Create remittance" do
   it 'Sends a remittance' do
     VCR.use_cassette('functional_create_remittance', record: :once, match_requests_on: %i(uri)) do
 
-      config = CONFIG.slice(*%i[api_token api_secret agent_id])
+      config = CONFIG.slice(*%i[api_token api_secret agent_id sandbox])
       client = BloomRemitClient.new(config)
 
       sender_response = client.create_sender(

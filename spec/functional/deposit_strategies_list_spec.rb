@@ -3,7 +3,8 @@ require 'spec_helper'
 RSpec.describe "Deposit strategies" do
 
   it "returns an array of deposit strategies", vcr: {record: :once} do
-    client = BloomRemitClient.new
+    config = CONFIG.slice(:sandbox)
+    client = BloomRemitClient.new(config)
 
     response = client.deposit_strategies_list
 

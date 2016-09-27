@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe "Create recipient" do
 
   it "Sends a recipient", vcr: {record: :once} do
-    config = CONFIG.slice(*%i[api_token api_secret agent_id])
+    config = CONFIG.slice(*%i[api_token api_secret agent_id sandbox])
     client = BloomRemitClient.new(config)
 
     sender_response = client.create_sender(

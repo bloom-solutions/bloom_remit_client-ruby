@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Base `credits` request' do
   let(:client) do
-    config = CONFIG.slice(*%i(api_token api_secret))
+    config = CONFIG.slice(*%i(api_token api_secret sandbox))
     ::BloomRemitClient.new(config)
   end
 
