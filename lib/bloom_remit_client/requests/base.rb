@@ -2,6 +2,16 @@
 module BloomRemitClient
   module Requests
     class Base
+      class << self
+        def call(params)
+          new(params).call
+        end
+
+        def call!(params)
+          new(params).call!
+        end
+      end
+
       include Virtus.model
       include ActiveModel::Validations
       attribute :host, String

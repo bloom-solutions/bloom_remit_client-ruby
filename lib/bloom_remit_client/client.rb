@@ -92,6 +92,19 @@ module BloomRemitClient
       Responses::Remittances::Create.new(raw_response: raw_response)
     end
 
+    # DELETE
+    # /api/v1/partners/:api_token/senders/:sender_id/remittance/:id
+    # Parameters:
+    #   sender_id: Required
+    #   id: or remittance_id:
+    #     String, required
+    def delete_remittance(params = {})
+      params[:remittance_id] ||= params.delete(:id)
+      request_params = params.merge(access_params)
+      raw_response = Requests::Remittances::Delete.call!(request_params)
+      Responses::Remittances::Delete.new(raw_response: raw_response)
+    end
+
     def calculate_remittance(calculate_params={})
       params = access_params.merge(calculate_params)
       request = Requests::Remittances::Calculate.new(params)
