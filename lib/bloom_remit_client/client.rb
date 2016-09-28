@@ -11,7 +11,7 @@ module BloomRemitClient
     attribute :sandbox, Boolean, default: true
 
     validates :host, presence: true
-    validates :sandbox, inclusion: {in: [true, false]}
+    validates :sandbox, inclusion: { in: [true, false] }
 
     # GET
     # /api/v1/partners/:api_token/credits

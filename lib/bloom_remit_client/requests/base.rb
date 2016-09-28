@@ -8,11 +8,11 @@ module BloomRemitClient
       validates :host, presence: true
 
       def call
-        RequestsSender.new(params).()
+        RequestsSender.call(params)
       end
 
       def call!
-        fail(ArgumentError, self.errors.full_messages) if self.invalid?
+        raise(ArgumentError, errors.full_messages) if invalid?
         call
       end
 
