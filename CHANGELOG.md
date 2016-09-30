@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.10.0] - 2016-09-30
 ### Added
 - Expose `category` on DepositStrategy
 - `#calculate_remittance` to get the remittance fees
