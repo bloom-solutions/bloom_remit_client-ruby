@@ -5,6 +5,7 @@ module BloomRemitClient
     attribute :slug, String
     attribute :name, String
     attribute :category, String
+    attribute :country, String
 
   end
 end

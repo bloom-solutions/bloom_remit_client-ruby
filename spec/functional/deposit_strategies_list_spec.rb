@@ -13,6 +13,7 @@ RSpec.describe "Deposit strategies" do
     expect(deposit_strategy.slug).to be_a String
     expect(deposit_strategy.name).to be_a String
     expect(%w(bank pickup)).to include(deposit_strategy.category)
+    expect(deposit_strategies.map(&:country)).to include("PH")
   end
 
 end
