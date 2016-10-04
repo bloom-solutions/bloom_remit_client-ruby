@@ -107,6 +107,17 @@ module BloomRemitClient
       Responses::DepositStrategies::List.new(raw_response: raw_response)
     end
 
+    def create_txn(txn_params={})
+      params = {txn: txn_params}.merge(
+        sender_id: txn_params[:sender_id],
+        recipient_id: txn_params[:recipient_id],
+      )
+      request_params = params.merge(default_params).merge(access_params)
+      request = Requests::Txns::Create.new(request_params)
+      raw_response = request.call!
+      Responses::Txns::Create.new(raw_response: raw_response)
+    end
+
     private
 
     # Should overwrite any other `:api_token`, `:api_secret`

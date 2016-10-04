@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Add `#create_txn` that uses a single endpoint to create remittances and payments
+
+### Fixed
+- Sender `agent_id` when creating a sender
+
 ## [0.11.0] - 2016-09-30
 ### Added
 - Expose `DepositStrategy#country`
