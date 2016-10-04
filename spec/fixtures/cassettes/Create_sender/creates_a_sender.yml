@@ -5,7 +5,7 @@ http_interactions:
     uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders.json?api_secret=[api_secret]
     body:
       encoding: UTF-8
-      string: '{"sender":{"first_name":"Luis","last_name":"Buenaventura","email":"64f1c7c63485e3c37c366e3882fb8b74@email.com","mobile":"+639175551111"}}'
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","sender":{"first_name":"Luis","last_name":"Buenaventura","email":"1e5102416bd707e1da41ecb879063503@email.com","mobile":"+639175551111"}}'
     headers:
       Content-Type:
       - application/json;charset=UTF-8
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 13 Sep 2016 03:35:57 GMT
+      - Tue, 04 Oct 2016 01:31:25 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -31,15 +31,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"07dbebe95127b96add2d27d9cabd689f"
+      - W/"af7da0e4868ddbac18b77a923652827a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
       - request_method=POST; path=/; secure
       X-Request-Id:
-      - 07c8df89-0bc8-4732-a4eb-d152324b3456
+      - eb799a73-1354-4138-8e4c-717cb2576dc8
       X-Runtime:
-      - '0.130764'
+      - '0.233699'
       Strict-Transport-Security:
       - max-age=31536000
       Transfer-Encoding:
@@ -48,7 +48,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"sender":{"id":"2481ae40-5802-43fc-aaca-b81aa80383a5","email":"64f1c7c63485e3c37c366e3882fb8b74@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"dbd90c9340b68640250a3c4241708fdf"}'
+      string: '{"sender":{"id":"cceb8bc7-d301-450d-be34-660b8a173a51","email":"1e5102416bd707e1da41ecb879063503@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"4585ce99ce90762b02c6792946f66ddc"}'
     http_version: 
-  recorded_at: Tue, 13 Sep 2016 03:35:57 GMT
+  recorded_at: Tue, 04 Oct 2016 01:31:26 GMT
 recorded_with: VCR 3.0.3

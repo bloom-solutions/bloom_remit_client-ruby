@@ -8,6 +8,7 @@ module BloomRemitClient
         PATH = "/api/v1/partners/:token/senders.json"
 
         attribute :sender, Hash
+        attribute :agent_id, String
 
         private
 
@@ -20,7 +21,7 @@ module BloomRemitClient
         end
 
         def body_params
-          { sender: sender }
+          attributes.slice(:agent_id, :sender)
         end
 
       end
