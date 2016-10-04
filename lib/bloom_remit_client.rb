@@ -30,6 +30,7 @@ require "bloom_remit_client/requests/payments/create"
 require "bloom_remit_client/requests/remittances/create"
 require "bloom_remit_client/requests/recipients/create"
 require "bloom_remit_client/requests/remittances/calculate"
+require "bloom_remit_client/requests/txns/create"
 require "bloom_remit_client/responses/base"
 require "bloom_remit_client/responses/billers/list"
 require "bloom_remit_client/responses/deposit_strategies/list"
@@ -38,6 +39,7 @@ require "bloom_remit_client/responses/payments/create"
 require "bloom_remit_client/responses/remittances/create"
 require "bloom_remit_client/responses/recipients/create"
 require "bloom_remit_client/responses/remittances/calculate"
+require "bloom_remit_client/responses/txns/create"
 
 module BloomRemitClient
   PRODUCTION = 'api.bloom.solutions'
