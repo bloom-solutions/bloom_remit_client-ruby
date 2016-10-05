@@ -27,11 +27,11 @@ RSpec.describe "List recipients" do
     expect(response).to be_success
     recipients = response.recipients
     expect(recipients).to_not be_empty
-    recipient = recipient.first
+    recipient = recipients.first
     expect(recipient.id).to be_present
     expect(recipient.first_name).to eq "Jack John"
     expect(recipient.last_name).to eq "S. Ong"
-    expect(recipient.mobile).to eq "+639175551111"
+    expect(recipient.mobile).to eq "+6398199818181"
   end
 
 end
