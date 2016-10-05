@@ -12,6 +12,7 @@ module BloomRemitClient
     attribute :state, String
     attribute :country, String
     attribute :postal_code, String
+    attribute :created_at, Time
 
   end
 end

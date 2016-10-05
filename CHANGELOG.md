@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Add `#recipient_list` to list the recipients of a sender
+
 ## [0.12.0] - 2016-10-04
 ### Added
 - Add `#create_txn` that uses a single endpoint to create remittances and payments

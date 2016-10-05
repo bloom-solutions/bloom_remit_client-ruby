@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders.json?api_secret=[api_secret]
+    body:
+      encoding: UTF-8
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","sender":{"first_name":"Luis","last_name":"Buenaventura","email":"a927eeeee42f57d937f02282a2c2547d@email.com","mobile":"+639175551111"}}'
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Oct 2016 02:42:35 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6251e0ced184a5395d89add77f3c972c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - f74a4e79-268b-4ffc-b6fc-80448daece7a
+      X-Runtime:
+      - '0.212307'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"sender":{"id":"36deb06b-a6fe-4032-a854-ff9cdab8320f","email":"a927eeeee42f57d937f02282a2c2547d@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"0c7a5c71bc7e0e4c976c03fc216a8965"}'
+    http_version: 
+  recorded_at: Wed, 05 Oct 2016 02:42:35 GMT
+- request:
+    method: post
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders/36deb06b-a6fe-4032-a854-ff9cdab8320f/recipients.json?api_secret=[api_secret]
+    body:
+      encoding: UTF-8
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","recipient":{"sender_id":"36deb06b-a6fe-4032-a854-ff9cdab8320f","first_name":"Jack
+        John","last_name":"S. Ong","mobile":"+6398199818181"}}'
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Oct 2016 02:42:35 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"28850d528c81271088170af9f1d8ebca"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure
+      X-Request-Id:
+      - 9e362b0c-8151-4cd1-a666-b8cde8c4124a
+      X-Runtime:
+      - '0.034973'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"recipient":{"id":"88c46a5e-e3c1-407f-a09a-460ef4c4864f","first_name":"Jack
+        John","last_name":"S. Ong","email":null,"mobile":"+6398199818181","sender_id":"36deb06b-a6fe-4032-a854-ff9cdab8320f","address":null,"zip_code":null,"city":null,"state":"Metro
+        Manila","country":"PH"}}'
+    http_version: 
+  recorded_at: Wed, 05 Oct 2016 02:42:36 GMT
+- request:
+    method: get
+    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders/36deb06b-a6fe-4032-a854-ff9cdab8320f/recipients.json?api_secret=[api_secret]
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Oct 2016 02:42:37 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"25d28cf8299299ae059953b2f860f8d1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5069ae37-d8d2-4f1d-aca2-f0ff84f9fbea
+      X-Runtime:
+      - '0.044473'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":"88c46a5e-e3c1-407f-a09a-460ef4c4864f","first_name":"Jack John","last_name":"S.
+        Ong","email":null,"mobile":"+6398199818181","created_at":"2016-10-05T10:42:36.461+08:00","state":"Metro
+        Manila","country":"PH"}]'
+    http_version: 
+  recorded_at: Wed, 05 Oct 2016 02:42:38 GMT
+recorded_with: VCR 3.0.3

@@ -15,6 +15,7 @@ module BloomRemitClient
       it { is_expected.to have_attribute(:state, String) }
       it { is_expected.to have_attribute(:country, String) }
       it { is_expected.to have_attribute(:postal_code, String) }
+      it { is_expected.to have_attribute(:created_at, Time) }
     end
 
   end
