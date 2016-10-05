@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.14.0] - 2016-10-05
 ### Added
 - Factories: `bloom_remit_client_responses_recipients_create`, `bloom_remit_client_responses_recipients_list`
 
