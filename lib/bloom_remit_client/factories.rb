@@ -25,4 +25,27 @@ FactoryGirl.define do
     body { {"json" => "value"} }
   end
 
+  factory(:bloom_remit_client_responses_recipients_create, {
+    class: "BloomRemitClient::Responses::Recipients::Create",
+  }) do
+    success true
+    body { {"json" => "value"} }
+  end
+
+  factory(:bloom_remit_client_responses_recipients_list, {
+    class: "BloomRemitClient::Responses::Recipients::List",
+  }) do
+    success true
+    recipients do
+      [
+        build(:bloom_remit_client_recipient),
+        build(:bloom_remit_client_recipient),
+      ]
+    end
+  end
+
+  factory :bloom_remit_client_recipient, class: "BloomRemitClient::Recipient" do
+    id { SecureRandom.uuid }
+  end
+
 end
