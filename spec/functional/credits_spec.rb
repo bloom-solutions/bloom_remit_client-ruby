@@ -7,6 +7,7 @@ describe 'Base `credits` request' do
   end
 
   it "have success response", vcr: {record: :once} do
+    pending
     expect(client.credits).to be_success
   end
 end

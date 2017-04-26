@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders.json?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/senders.json?api_secret=[api_secret]
     body:
       encoding: UTF-8
-      string: '{"sender":{"first_name":"Lauriane","last_name":"Swift","email":"eric.hahn@balistrerihuels.name"}}'
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","sender":{"first_name":"Judd","last_name":"Kozey","email":"ford_mayert@lang.com"}}'
     headers:
       Content-Type:
       - application/json;charset=UTF-8
@@ -16,47 +16,47 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 23 Sep 2016 09:11:59 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"beb9f197ea04314dccb266ef91a6a6ff"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      - W/"0dc879a773ee53e4ef1acbeca80fb104"
+      Server:
+      - Caddy
       Set-Cookie:
       - request_method=POST; path=/; secure
-      X-Request-Id:
-      - 5cacd15d-437a-4b20-a6eb-ed63114b6d21
-      X-Runtime:
-      - '0.127585'
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - fc8a50f2-0545-473c-aa05-12ea5d62dbf7
+      X-Runtime:
+      - '0.141878'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Wed, 26 Apr 2017 07:48:52 GMT
+      Content-Length:
+      - '337'
     body:
       encoding: UTF-8
-      string: '{"sender":{"id":"88c9af89-83fe-4edf-bb7a-2c8e82f45777","email":"eric.hahn@balistrerihuels.name","first_name":"Lauriane","last_name":"Swift","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":null,"address":null,"city":null,"state":null,"zip_code":null,"country":"HK","birthdate":null},"password":"b75aa9fc62e2794f0a9fb190a899e16b"}'
+      string: '{"sender":{"id":"956e32ec-dd85-4631-b806-da20c0b2e82f","email":"ford_mayert@lang.com","first_name":"Judd","last_name":"Kozey","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":null,"address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"f4ece5ab134c5215557adb4bd5dd11c1"}'
     http_version: 
-  recorded_at: Fri, 23 Sep 2016 09:11:59 GMT
+  recorded_at: Wed, 26 Apr 2017 07:48:53 GMT
 - request:
     method: post
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders/88c9af89-83fe-4edf-bb7a-2c8e82f45777/recipients.json?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/senders/956e32ec-dd85-4631-b806-da20c0b2e82f/recipients.json?api_secret=[api_secret]
     body:
       encoding: UTF-8
-      string: '{"agent_id":"f2caef5a-9b16-43a0-b7d0-0a5c4aa7e9dd","recipient":{"sender_id":"88c9af89-83fe-4edf-bb7a-2c8e82f45777","first_name":"Jack","last_name":"Johnson","mobile":"+6398199818181"}}'
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","recipient":{"sender_id":"956e32ec-dd85-4631-b806-da20c0b2e82f","first_name":"Jack","last_name":"Johnson","mobile":"+6398199818181"}}'
     headers:
       Content-Type:
       - application/json;charset=UTF-8
@@ -67,49 +67,49 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 23 Sep 2016 09:12:00 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bf16790853cc94dca3396430bbee5fa8"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      - W/"93afe4eafe5adb0f9c29156883b77c40"
+      Server:
+      - Caddy
       Set-Cookie:
       - request_method=POST; path=/; secure
-      X-Request-Id:
-      - ca6e3396-c53d-4bf9-a12c-7ab433ba2436
-      X-Runtime:
-      - '0.028078'
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - d2628e84-1fe2-4481-bfa6-648f6f2b4994
+      X-Runtime:
+      - '0.087096'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Wed, 26 Apr 2017 07:48:53 GMT
+      Content-Length:
+      - '272'
     body:
       encoding: UTF-8
-      string: '{"recipient":{"id":"c5fc74f7-d7fc-414e-bb9b-9fb8b98a8a3d","first_name":"Jack","last_name":"Johnson","email":null,"mobile":"+6398199818181","sender_id":"88c9af89-83fe-4edf-bb7a-2c8e82f45777","address":null,"zip_code":null,"city":null,"state":"Metro
+      string: '{"recipient":{"id":"f6bb7e07-1037-4591-b5ab-5c89e88bfe87","first_name":"Jack","last_name":"Johnson","email":null,"mobile":"+6398199818181","sender_id":"956e32ec-dd85-4631-b806-da20c0b2e82f","address":null,"zip_code":null,"city":null,"state":"Metro
         Manila","country":"PH"}}'
     http_version: 
-  recorded_at: Fri, 23 Sep 2016 09:12:00 GMT
+  recorded_at: Wed, 26 Apr 2017 07:48:53 GMT
 - request:
     method: post
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders/88c9af89-83fe-4edf-bb7a-2c8e82f45777/remittances?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/senders/956e32ec-dd85-4631-b806-da20c0b2e82f/remittances?api_secret=[api_secret]
     body:
       encoding: UTF-8
-      string: '{"agent_id":"f2caef5a-9b16-43a0-b7d0-0a5c4aa7e9dd","recipient_id":"c5fc74f7-d7fc-414e-bb9b-9fb8b98a8a3d","remittance":{"sender_id":"88c9af89-83fe-4edf-bb7a-2c8e82f45777","recipient_id":"c5fc74f7-d7fc-414e-bb9b-9fb8b98a8a3d","account_name":"Jack
-        Johnson","account_number":"1234567890","callback_url":"http://callback.com/callback","dest_currency":"PHP","orig_currency":"KRW","flat_fee_in_orig_currency":3000,"paid_in_orig_currency":15000,"payout_method":"BDO","receivable_in_dest_currency":500}}'
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","recipient_id":"f6bb7e07-1037-4591-b5ab-5c89e88bfe87","remittance":{"sender_id":"956e32ec-dd85-4631-b806-da20c0b2e82f","recipient_id":"f6bb7e07-1037-4591-b5ab-5c89e88bfe87","account_name":"Jack
+        Johnson","account_number":"1234567890","callback_url":"http://callback.com/callback","dest_currency":"PHP","orig_currency":"KRW","flat_fee_in_orig_currency":3000,"payout_method":"BDO","receivable_in_dest_currency":500}}'
     headers:
       Content-Type:
       - application/json;charset=UTF-8
@@ -117,43 +117,30 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 23 Sep 2016 09:21:21 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Content-Length:
+      - '48'
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"55515feb6a1528f6b0826d6ca4c7adbe"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - request_method=POST; path=/; secure
-      X-Request-Id:
-      - e0542dcc-fab5-4b4f-9ae1-8edbd8e1b15f
-      X-Runtime:
-      - '0.126242'
+      Server:
+      - Caddy
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Request-Id:
+      - d7758f6f-4943-4af9-b3fd-41beba906560
+      X-Runtime:
+      - '1.159605'
+      Date:
+      - Wed, 26 Apr 2017 07:48:55 GMT
     body:
       encoding: UTF-8
-      string: '{"remittance":{"id":"128c24e9-8831-4c82-bc7b-e560f47a1f83","teller_id":"1bf9368b-627f-4db5-94d6-88ff4678725e","recipient_id":"c5fc74f7-d7fc-414e-bb9b-9fb8b98a8a3d","orig_currency":"KRW","dest_currency":"PHP","paid_in_orig_currency":11545.17,"receivable_in_dest_currency":500.0,"payout_method":"BDO","tracking_sender":null,"tracking_number":null,"status_description":null,"flat_fee_in_orig_currency":3000.0,"forex_margin":0.0,"account_name":"Jack
-        Johnson","account_number":"1234567890","callback_url":"http://callback.com/callback","status":"incomplete","vendor_external_id":null,"sender_id":"88c9af89-83fe-4edf-bb7a-2c8e82f45777"}}'
+      string: '{"status":"500","error":"Internal Server Error"}'
     http_version: 
-  recorded_at: Fri, 23 Sep 2016 09:21:21 GMT
+  recorded_at: Wed, 26 Apr 2017 07:48:55 GMT
 recorded_with: VCR 3.0.3

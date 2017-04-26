@@ -44,8 +44,8 @@ require "bloom_remit_client/responses/remittances/calculate"
 require "bloom_remit_client/responses/txns/create"
 
 module BloomRemitClient
-  PRODUCTION = 'api.bloom.solutions'
-  STAGING = 'bloomremit-staging.herokuapp.com'
+  PRODUCTION = 'www.bloomremit.net'
+  STAGING = 'staging.bloomremit.net'
 
   class << self
     attr_accessor :host

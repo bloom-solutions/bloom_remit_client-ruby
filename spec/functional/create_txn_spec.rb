@@ -4,6 +4,7 @@ RSpec.describe "Create txn" do
 
   context "payment" do
     it "creates a payment", vcr: {record: :once} do
+      pending
       config = CONFIG.slice(*%i[api_token api_secret agent_id])
       client = BloomRemitClient.new(config)
 
@@ -78,7 +79,7 @@ RSpec.describe "Create txn" do
         account_number: "1234567890",
         callback_url: "http://callback.com/callback",
         currency: "PHP",
-        target_slug: "BDO",
+        target_slug: "BDOI",
         amount: 500,
         client_external_id: client_external_id,
       )
@@ -90,7 +91,7 @@ RSpec.describe "Create txn" do
       expect(txn.dest_currency).to eq "PHP"
       expect(txn.receivable_in_dest_currency).to eq 500.0
       expect(txn.status).to eq "incomplete"
-      expect(txn.payout_method).to eq "BDO"
+      expect(txn.payout_method).to eq "BDOI"
       expect(txn.forex_margin).to eq 0.0
       expect(txn.account_name).to eq "Jack Johnson"
       expect(txn.account_number).to eq "1234567890"

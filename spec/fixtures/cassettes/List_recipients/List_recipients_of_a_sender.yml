@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders.json?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/senders.json?api_secret=[api_secret]
     body:
       encoding: UTF-8
-      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","sender":{"first_name":"Luis","last_name":"Buenaventura","email":"a927eeeee42f57d937f02282a2c2547d@email.com","mobile":"+639175551111"}}'
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","sender":{"first_name":"Luis","last_name":"Buenaventura","email":"7786f48469c0dc6f4a9c23a57feafbcf@email.com","mobile":"+639175551111"}}'
     headers:
       Content-Type:
       - application/json;charset=UTF-8
@@ -16,47 +16,47 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 05 Oct 2016 02:42:35 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6251e0ced184a5395d89add77f3c972c"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      - W/"b845b559df2a9bc324875620664495b0"
+      Server:
+      - Caddy
       Set-Cookie:
       - request_method=POST; path=/; secure
-      X-Request-Id:
-      - f74a4e79-268b-4ffc-b6fc-80448daece7a
-      X-Runtime:
-      - '0.212307'
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 4f1b4eb9-d742-4c15-8dd9-88be14ab2e2a
+      X-Runtime:
+      - '0.115471'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Wed, 26 Apr 2017 07:49:10 GMT
+      Content-Length:
+      - '377'
     body:
       encoding: UTF-8
-      string: '{"sender":{"id":"36deb06b-a6fe-4032-a854-ff9cdab8320f","email":"a927eeeee42f57d937f02282a2c2547d@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"0c7a5c71bc7e0e4c976c03fc216a8965"}'
+      string: '{"sender":{"id":"23fee092-f417-4a62-80bb-f1a176f05fe9","email":"7786f48469c0dc6f4a9c23a57feafbcf@email.com","first_name":"Luis","last_name":"Buenaventura","passport_number":null,"passport_expiry_date":null,"tin":null,"mobile":"+639175551111","address":null,"city":null,"state":null,"zip_code":null,"country":"PH","birthdate":null},"password":"560ad6bd464b42fd164c5354c1a2ae04"}'
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 02:42:35 GMT
+  recorded_at: Wed, 26 Apr 2017 07:49:10 GMT
 - request:
     method: post
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders/36deb06b-a6fe-4032-a854-ff9cdab8320f/recipients.json?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/senders/23fee092-f417-4a62-80bb-f1a176f05fe9/recipients.json?api_secret=[api_secret]
     body:
       encoding: UTF-8
-      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","recipient":{"sender_id":"36deb06b-a6fe-4032-a854-ff9cdab8320f","first_name":"Jack
+      string: '{"agent_id":"f7953643-11ee-4e72-9aa0-be5b97f7220b","recipient":{"sender_id":"23fee092-f417-4a62-80bb-f1a176f05fe9","first_name":"Jack
         John","last_name":"S. Ong","mobile":"+6398199818181"}}'
     headers:
       Content-Type:
@@ -68,46 +68,46 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 05 Oct 2016 02:42:35 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"28850d528c81271088170af9f1d8ebca"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      - W/"36f8c2b01f186bbdd23bc2fa3cff0c95"
+      Server:
+      - Caddy
       Set-Cookie:
       - request_method=POST; path=/; secure
-      X-Request-Id:
-      - 9e362b0c-8151-4cd1-a666-b8cde8c4124a
-      X-Runtime:
-      - '0.034973'
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - ec57d511-bc12-44e0-87c6-deb3b841427b
+      X-Runtime:
+      - '0.025210'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Wed, 26 Apr 2017 07:49:11 GMT
+      Content-Length:
+      - '276'
     body:
       encoding: UTF-8
-      string: '{"recipient":{"id":"88c46a5e-e3c1-407f-a09a-460ef4c4864f","first_name":"Jack
-        John","last_name":"S. Ong","email":null,"mobile":"+6398199818181","sender_id":"36deb06b-a6fe-4032-a854-ff9cdab8320f","address":null,"zip_code":null,"city":null,"state":"Metro
+      string: '{"recipient":{"id":"080dc2d2-9ffc-48b3-af05-6bc2ed455ad8","first_name":"Jack
+        John","last_name":"S. Ong","email":null,"mobile":"+6398199818181","sender_id":"23fee092-f417-4a62-80bb-f1a176f05fe9","address":null,"zip_code":null,"city":null,"state":"Metro
         Manila","country":"PH"}}'
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 02:42:36 GMT
+  recorded_at: Wed, 26 Apr 2017 07:49:11 GMT
 - request:
     method: get
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/senders/36deb06b-a6fe-4032-a854-ff9cdab8320f/recipients.json?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/senders/23fee092-f417-4a62-80bb-f1a176f05fe9/recipients.json?api_secret=[api_secret]
     body:
       encoding: US-ASCII
       string: ''
@@ -121,39 +121,39 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 05 Oct 2016 02:42:37 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"25d28cf8299299ae059953b2f860f8d1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 5069ae37-d8d2-4f1d-aca2-f0ff84f9fbea
-      X-Runtime:
-      - '0.044473'
+      - W/"54e49b316a640ee45175d0865b0e0b82"
+      Server:
+      - Caddy
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - d9ca8c5c-ebe9-4537-b7b5-553a9ba1b5c4
+      X-Runtime:
+      - '0.059569'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Wed, 26 Apr 2017 07:49:12 GMT
+      Content-Length:
+      - '215'
     body:
       encoding: UTF-8
-      string: '[{"id":"88c46a5e-e3c1-407f-a09a-460ef4c4864f","first_name":"Jack John","last_name":"S.
-        Ong","email":null,"mobile":"+6398199818181","created_at":"2016-10-05T10:42:36.461+08:00","state":"Metro
+      string: '[{"id":"080dc2d2-9ffc-48b3-af05-6bc2ed455ad8","first_name":"Jack John","last_name":"S.
+        Ong","email":null,"mobile":"+6398199818181","created_at":"2017-04-26T15:49:11.637+08:00","state":"Metro
         Manila","country":"PH"}]'
     http_version: 
-  recorded_at: Wed, 05 Oct 2016 02:42:38 GMT
+  recorded_at: Wed, 26 Apr 2017 07:49:12 GMT
 recorded_with: VCR 3.0.3

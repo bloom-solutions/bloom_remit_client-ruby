@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bloomremit-staging.herokuapp.com/api/v1/partners/[api_token]/credits?api_secret=[api_secret]
+    uri: https://staging.bloomremit.net/api/v1/partners/[api_token]/credits?api_secret=[api_secret]
     body:
       encoding: US-ASCII
       string: ''
@@ -13,40 +13,30 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 13 Sep 2016 04:30:39 GMT
-      Connection:
-      - keep-alive
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Alternate-Protocol:
+      - 443:quic
+      Content-Length:
+      - '48'
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8198828208e98bea7a8bc4a08ef28d9b"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ad082149-3a28-4961-9dd0-327214e833a9
-      X-Runtime:
-      - '0.114748'
+      Server:
+      - Caddy
       Strict-Transport-Security:
       - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      X-Request-Id:
+      - 0559f753-c856-4e39-8528-988c9d5cbf32
+      X-Runtime:
+      - '0.030929'
+      Date:
+      - Wed, 26 Apr 2017 09:03:54 GMT
     body:
       encoding: UTF-8
-      string: '{"address":"16txuBfNXuXmmUHf8RiRMmaGokW5tR7nJ2","timestamp_ph":"2016-09-13T12:30:40.563+08:00","rates":{"btcusd":639.09,"btcaud":802.226028,"btcphp":28790.23109,"btckrw":673394.079281}}'
+      string: '{"status":"500","error":"Internal Server Error"}'
     http_version: 
-  recorded_at: Tue, 13 Sep 2016 04:30:41 GMT
+  recorded_at: Wed, 26 Apr 2017 09:03:54 GMT
 recorded_with: VCR 3.0.3
