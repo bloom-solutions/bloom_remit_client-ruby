@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.15.0] - 2017-04-26
+### Changed
+- Production domain is now `www.bloomremit.net`
+- Marked `pending` the failing specs:
+  - create payment
+  - fetch credits
+
 ## [0.14.0] - 2016-10-05
 ### Added
 - Factories: `bloom_remit_client_responses_recipients_create`, `bloom_remit_client_responses_recipients_list`
