@@ -4,6 +4,7 @@ require 'pathname'
 require 'yaml'
 require 'pry'
 require 'faker'
+require "virtus/matchers/rspec"
 
 SPEC_DIR = Pathname.new(File.dirname(__FILE__))
 
