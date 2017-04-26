@@ -5,4 +5,3 @@ gemspec
 
 gem "pry"
 gem "pry-byebug"
-gem "virtus-matchers", github: "g5/virtus-matchers"
