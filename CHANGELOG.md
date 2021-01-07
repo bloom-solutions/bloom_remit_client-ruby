@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Removed all API methods (complete overhaul)
+
+### Added
+- `#create_txn` to create transactions
+
 ## [0.15.0] - 2017-04-26
 ### Changed
 - Production domain is now `www.bloomremit.net`

@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.bloomremit.net/api/v2/txns
+    body:
+      encoding: UTF-8
+      string: txn%5Baccount_name%5D=account%20name&txn%5Baccount_number%5D=0123456789&txn%5Bclient_external_id%5D=ef516582-2708-44bf-acbe-c5899894bd92&txn%5Bdest_currency%5D=PHP&txn%5Bpayout_method%5D=PLWNE&txn%5Bpurpose%5D=Help&txn%5Breceivable_in_dest_currency%5D=500&txn%5Brecipient_address%5D=recipient%20address&txn%5Brecipient_city%5D=Makati&txn%5Brecipient_country%5D=Philippines&txn%5Brecipient_first_name%5D=Jack&txn%5Brecipient_last_name%5D=Johnson&txn%5Brecipient_mobile%5D=%2B6398199818181&txn%5Brecipient_occupation%5D=Worker&txn%5Brecipient_relationship_to_sender%5D=Bro&txn%5Brecipient_state%5D=MM&txn%5Brecipient_zip_code%5D=1700&txn%5Bsender_address%5D=sender%20address&txn%5Bsender_city%5D=Makati&txn%5Bsender_country%5D=Philippines&txn%5Bsender_email%5D=brandy%40moore.org&txn%5Bsender_first_name%5D=Guadalupe&txn%5Bsender_last_name%5D=Cummerata&txn%5Bsender_mobile%5D&txn%5Bsender_occupation%5D=Worker&txn%5Bsender_state%5D=MM&txn%5Bsender_zip_code%5D=1700
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Partner-Id:
+      - 52c48f32-07fd-4e4a-a3eb-6606b26742b7
+      X-Api-Secret:
+      - "[api_secret]"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cd3575047baf759b7c46ee63020cf48b"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 82cc434a-fcce-4483-abf8-169096861998
+      X-Runtime:
+      - '0.382558'
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '872'
+      Date:
+      - Thu, 07 Jan 2021 07:12:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"txn":{"id":"510a19c6-3944-4faf-9051-ce3db82eb8ef","dest_currency":"PHP","receivable_in_dest_currency":500.0,"payout_method":"PLWNE","status":"waiting","account_name":"account
+        name","account_number":"0123456789","client_external_id":"ef516582-2708-44bf-acbe-c5899894bd92","purpose":"Help","sender_first_name":"Guadalupe","sender_last_name":"Cummerata","sender_email":"brandy@moore.org","sender_address":"sender
+        address","sender_city":"Makati","sender_state":"MM","sender_zip_code":"1700","sender_country":"Philippines","sender_occupation":"Worker","recipient_first_name":"Jack","recipient_last_name":"Johnson","recipient_mobile":"+6398199818181","recipient_address":"recipient
+        address","recipient_city":"Makati","recipient_state":"MM","recipient_zip_code":"1700","recipient_country":"Philippines","recipient_occupation":"Worker","recipient_relationship_to_sender":"Bro"}}'
+  recorded_at: Thu, 07 Jan 2021 07:12:59 GMT
+recorded_with: VCR 6.0.0

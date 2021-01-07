@@ -26,10 +26,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activemodel"
   spec.add_dependency "activesupport"
-  spec.add_dependency "httparty"
-  spec.add_dependency "addressable"
+  spec.add_dependency "api_client_base"
+  spec.add_dependency "typhoeus"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
@@ -38,6 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'faker'
   spec.add_development_dependency "webmock"
   spec.add_development_dependency "dotenv"
-  spec.add_development_dependency "shoulda-matchers"
   spec.add_development_dependency "virtus-matchers"
 end
