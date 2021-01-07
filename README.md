@@ -1,7 +1,5 @@
 # BloomRemitClient
 
-[![Build Status](https://travis-ci.org/imacchiato/bloom_remit_client-ruby.svg?branch=master)](https://travis-ci.org/imacchiato/bloom_remit_client-ruby)
-
 Ruby wrapper for BloomRemit's API.
 
 ## Installation
