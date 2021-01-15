@@ -18,10 +18,34 @@ module BloomRemitClient
 
   include APIClientBase::Base.module
 
+  TXN_UPDATES_CHANNEL = "/v2/txns".freeze
+
   with_configuration do
     has :host, classes: String, default: STAGING
     has :partner_id, classes: String
     has :api_secret, classes: String
+    has :on_txn_update, classes: [String, NilClass]
+  end
+
+  def self.configure_message_bus_client_worker!
+    if configuration.on_txn_update.blank?
+      fail "`on_txn_update` must be defined"
+    end
+
+    token = [
+      configuration.partner_id,
+      configuration.api_secret,
+    ].join(":")
+    token = Base64.strict_encode64(token)
+
+    MessageBusClientWorker.subscribe(configuration.host, {
+      headers: {
+        "HTTP_AUTHORIZATION" => "Basic #{token}"
+      },
+      channels: {
+        TXN_UPDATES_CHANNEL => { processor: configuration.on_txn_update },
+      }
+    })
   end
 
 end
