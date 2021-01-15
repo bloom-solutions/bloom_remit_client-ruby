@@ -2,6 +2,7 @@
 require "api_client_base"
 require 'active_support/core_ext/hash/indifferent_access'
 require 'active_support/core_ext/object/try'
+require "message_bus_client_worker"
 require 'bloom_remit_client/coercers/indifferent_hash'
 require "bloom_remit_client/version"
 require "bloom_remit_client/client"
