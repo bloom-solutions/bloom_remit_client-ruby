@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - `#create_txn` to create transactions
+- `#create_txn_preview` to determine fees, eta, and max amount of a transaction
 
 ## [0.15.0] - 2017-04-26
 ### Changed
