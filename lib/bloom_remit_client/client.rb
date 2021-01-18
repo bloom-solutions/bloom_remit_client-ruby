@@ -8,6 +8,7 @@ module BloomRemitClient
     attribute :host, String, lazy: true, default: :default_host
 
     api_action :create_txn
+    api_action :create_txn_preview
 
     def default_opts
       { host: host, partner_id: partner_id, api_secret: api_secret }

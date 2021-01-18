@@ -1,11 +1,5 @@
 module BloomRemitClient
-  class CreateTxnRequest
-
-    include APIClientBase::Request.module(action: :post)
-
-    attribute :host, String
-    attribute :partner_id, String
-    attribute :api_secret, String
+  class CreateTxnRequest < BaseRequest
 
     attribute :sender_first_name, String
     attribute :sender_last_name, String
@@ -65,15 +59,12 @@ module BloomRemitClient
       client_external_id
     ].freeze
 
-    def path
-      "/api/v2/txns"
+    def default_action
+      :post
     end
 
-    def headers
-      {
-        "X-API-PARTNER-ID" => partner_id,
-        "X-API-SECRET" => api_secret,
-      }
+    def path
+      "/api/v2/txns"
     end
 
     def body

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.bloomremit.net/api/v2/txn_previews
+    body:
+      encoding: UTF-8
+      string: txn_preview%5Bamount%5D=0.5e3&txn_preview%5Bpayout_method%5D=BPI
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Partner-Id:
+      - 52c48f32-07fd-4e4a-a3eb-6606b26742b7
+      X-Api-Secret:
+      - "[api_secret]"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9b4ac317916f44e2f342cb3f111f12fa"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 81f0d6ec-522c-4778-a88c-97c87213c6c1
+      X-Runtime:
+      - '0.033991'
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '206'
+      Date:
+      - Mon, 18 Jan 2021 07:54:32 GMT
+    body:
+      encoding: UTF-8
+      string: '{"txn_preview":{"amount":"500.0","payout_method":"BPI","maximum_amount":"500000.0","minimum_wait_time_in_minutes":1440,"maximum_wait_time_in_minutes":1440,"days_available":[1,2,3,4,5],"total_fees":"100.0"}}'
+  recorded_at: Mon, 18 Jan 2021 07:54:33 GMT
+recorded_with: VCR 6.0.0
