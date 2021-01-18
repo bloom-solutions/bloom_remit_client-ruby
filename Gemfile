@@ -5,3 +5,5 @@ gemspec
 
 gem "pry"
 gem "pry-byebug"
+
+gem "message_bus_client_worker", github: "bloom-solutions/message_bus_client_worker", branch: "feat-subscribe"

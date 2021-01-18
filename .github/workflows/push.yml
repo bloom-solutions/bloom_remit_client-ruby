@@ -1,0 +1,27 @@
+name: Ruby Gem
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+    - name: Bundle install
+      run: bundle install
+    - name: Copy spec config
+      run: cp spec/config.yml{.sample,}
+    - name: Run tests
+      run: bundle exec rspec
