@@ -27,8 +27,8 @@ module BloomRemitClient
 
   with_configuration do
     has :host, classes: String, default: STAGING
-    has :partner_id, classes: String
-    has :api_secret, classes: String
+    has :partner_id, classes: [String, NilClass]
+    has :api_secret, classes: [String, NilClass]
     has :on_txn_update, classes: [String, NilClass]
   end
 
