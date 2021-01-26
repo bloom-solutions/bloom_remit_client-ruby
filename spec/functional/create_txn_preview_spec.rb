@@ -38,6 +38,7 @@ RSpec.describe "Create txn preview" do
 
       expect(response).to be_success, response.raw_response.body
 
+      expect(response.errors).to be_a Array
       expect(response.errors)
         .to include "Cannot find deposit target with slug ABSD#12341234"
     end
