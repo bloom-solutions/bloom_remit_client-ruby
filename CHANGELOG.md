@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- `CreateTxnPreviewResponse#errors` change from `Hash` to `Array`
+
 ## [0.16.1] - 2020-01-19
 ### Changed
 - Allow nil for both `partner_id` and `api_secret
