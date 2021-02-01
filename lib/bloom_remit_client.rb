@@ -8,13 +8,16 @@ require "bloom_remit_client/version"
 require "bloom_remit_client/client"
 require "bloom_remit_client/models/txn"
 require "bloom_remit_client/models/txn_preview"
+require "bloom_remit_client/models/deposit_target"
 require "bloom_remit_client/requests"
 require "bloom_remit_client/requests/base_request"
 require "bloom_remit_client/requests/create_txn_request"
 require "bloom_remit_client/requests/create_txn_preview_request"
+require "bloom_remit_client/requests/get_deposit_targets_request"
 require "bloom_remit_client/responses/base_response"
 require "bloom_remit_client/responses/create_txn_response"
 require "bloom_remit_client/responses/create_txn_preview_response"
+require "bloom_remit_client/responses/get_deposit_targets_response"
 
 module BloomRemitClient
 
