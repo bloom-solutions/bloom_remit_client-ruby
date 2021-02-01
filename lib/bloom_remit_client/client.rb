@@ -9,6 +9,7 @@ module BloomRemitClient
 
     api_action :create_txn
     api_action :create_txn_preview
+    api_action :get_deposit_targets
 
     def default_opts
       { host: host, partner_id: partner_id, api_secret: api_secret }

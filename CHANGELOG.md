@@ -2,15 +2,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.16.2] - 2020-01-26
+## [0.17.0] - 2021-02-01
+### Added
+- `#get_deposit_targets` to list all deposit targets
+
+## [0.16.2] - 2021-01-26
 ### Changed
 - `CreateTxnPreviewResponse#errors` change from `Hash` to `Array`
 
-## [0.16.1] - 2020-01-19
+## [0.16.1] - 2021-01-19
 ### Changed
 - Allow nil for both `partner_id` and `api_secret
 
-## [0.16.0] - 2020-01-18
+## [0.16.0] - 2021-01-18
 ### Changed
 - Removed all API methods (complete overhaul)
 
