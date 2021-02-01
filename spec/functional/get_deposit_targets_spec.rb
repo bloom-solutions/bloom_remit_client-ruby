@@ -10,7 +10,7 @@ RSpec.describe "Get deposit targets" do
 
     expect(response).to be_success, response.raw_response.body
 
-    deposit_targets = response.parsed_body
+    deposit_targets = response.deposit_targets
     dt = deposit_targets.first
 
     aggregate_failures do
