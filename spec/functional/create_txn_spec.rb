@@ -2,10 +2,12 @@ require 'spec_helper'
 
 RSpec.describe "Create txn" do
 
-  it "creates a transaction", vcr: {record: :once} do
+  let(:client) do
     config = CONFIG.slice(*%i[partner_id api_secret])
-    client = BloomRemitClient.new(config)
+    BloomRemitClient.new(config)
+  end
 
+  it "creates a transaction", vcr: {record: :once} do
     client_external_id = SecureRandom.uuid
 
     response = client.create_txn(
@@ -38,13 +40,55 @@ RSpec.describe "Create txn" do
       account_number: "0123456789",
     )
     expect(response).to be_success, response.raw_response.body
+    expect(response.errors).to be_empty
+
     txn = response.txn
+
     expect(txn.id).to be_a String
     expect(txn.dest_currency).to eq "PHP"
     expect(txn.receivable_in_dest_currency).to eq 500.0
     expect(txn.status).to eq "waiting"
     expect(txn.payout_method).to eq "PLWNE"
     expect(txn.client_external_id).to be_present
+  end
+
+  context "has errors", vcr: { record: :once } do
+    it "returns an error" do
+      client_external_id = SecureRandom.uuid
+
+      response = client.create_txn(
+        client_external_id: client_external_id,
+        sender_first_name: "",
+        sender_last_name: "",
+        sender_email: "",
+        sender_city: "",
+        sender_state: "",
+        sender_country: "",
+        sender_occupation: "",
+        recipient_first_name: "",
+        recipient_last_name: "",
+        recipient_mobile: "",
+        recipient_city: "",
+        recipient_state: "",
+        recipient_country: "",
+        recipient_occupation: "",
+        recipient_relationship_to_sender: "",
+        purpose: "",
+
+        dest_currency: "",
+        receivable_in_dest_currency: 500,
+        payout_method: "",
+        sender_zip_code: "",
+        sender_address: "",
+        recipient_zip_code: "",
+        recipient_address: "",
+        account_name: "",
+        account_number: "",
+      )
+
+      expect(response).not_to be_success
+      expect(response.errors).not_to be_empty
+    end
   end
 
 end

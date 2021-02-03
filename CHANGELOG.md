@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Add `create_txn#errors` to easily access errors
+
 ## [0.17.0] - 2021-02-01
 ### Added
 - `#get_deposit_targets` to list all deposit targets
