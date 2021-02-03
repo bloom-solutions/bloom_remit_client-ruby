@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.bloomremit.net/api/v2/txns
+    body:
+      encoding: UTF-8
+      string: txn%5Baccount_name%5D=&txn%5Baccount_number%5D=&txn%5Bclient_external_id%5D=002170af-0e89-4455-8cd8-488be7d21aa6&txn%5Bdest_currency%5D=&txn%5Bpayout_method%5D=&txn%5Bpurpose%5D=&txn%5Breceivable_in_dest_currency%5D=500&txn%5Brecipient_address%5D=&txn%5Brecipient_city%5D=&txn%5Brecipient_country%5D=&txn%5Brecipient_first_name%5D=&txn%5Brecipient_last_name%5D=&txn%5Brecipient_mobile%5D=&txn%5Brecipient_occupation%5D=&txn%5Brecipient_relationship_to_sender%5D=&txn%5Brecipient_state%5D=&txn%5Brecipient_zip_code%5D=&txn%5Bsender_address%5D=&txn%5Bsender_city%5D=&txn%5Bsender_country%5D=&txn%5Bsender_email%5D=&txn%5Bsender_first_name%5D=&txn%5Bsender_last_name%5D=&txn%5Bsender_mobile%5D&txn%5Bsender_occupation%5D=&txn%5Bsender_state%5D=&txn%5Bsender_zip_code%5D=
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      X-Api-Partner-Id:
+      - 52c48f32-07fd-4e4a-a3eb-6606b26742b7
+      X-Api-Secret:
+      - "[api_secret]"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 422
+      message: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 82e50bc2-4726-4cab-9c77-6da1dc81f2e9
+      X-Runtime:
+      - '0.575691'
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '666'
+      Date:
+      - Wed, 03 Feb 2021 06:16:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"errors":"Sender First Name can''t be blank, Sender Last Name can''t
+        be blank, Sender City can''t be blank, Sender State can''t be blank, Sender
+        Zip Code can''t be blank, Sender Country can''t be blank, Sender Occupation
+        can''t be blank, Recipient First Name can''t be blank, Recipient Last Name
+        can''t be blank, Recipient City can''t be blank, Recipient State can''t be
+        blank, Recipient Zip Code can''t be blank, Recipient Country can''t be blank,
+        Recipient Occupation can''t be blank, Recipient Relationship To Sender can''t
+        be blank, Dest Currency can''t be blank, Payout Method can''t be blank, Purpose
+        can''t be blank, Sender Email can''t be blank, Sender Mobile can''t be blank"}'
+  recorded_at: Wed, 03 Feb 2021 06:16:42 GMT
+recorded_with: VCR 6.0.0
