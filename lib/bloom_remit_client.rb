@@ -26,7 +26,7 @@ module BloomRemitClient
 
   include APIClientBase::Base.module
 
-  TXN_UPDATES_CHANNEL = "/v2/txns".freeze
+  TXN_UPDATES_CHANNEL = "/v2/tx_events".freeze
 
   with_configuration do
     has :host, classes: String, default: STAGING
