@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.17.3] - 2021-02-19
 ### Fixed
 - Pass `Authorization` header to BloomRemit
 
