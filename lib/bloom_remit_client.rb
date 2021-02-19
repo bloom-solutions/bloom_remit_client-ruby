@@ -48,7 +48,7 @@ module BloomRemitClient
 
     MessageBusClientWorker.subscribe(configuration.host, {
       headers: {
-        "HTTP_AUTHORIZATION" => "Basic #{token}"
+        "Authorization" => "Basic #{token}"
       },
       channels: {
         TXN_UPDATES_CHANNEL => { processor: configuration.on_txn_update },

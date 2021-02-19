@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Fixed
+- Pass `Authorization` header to BloomRemit
+
 ## [0.17.2] - 2021-02-11
 ### Changed
 - Update messagebus channel to `/v2/tx_events` (from `/v2/txns`)
