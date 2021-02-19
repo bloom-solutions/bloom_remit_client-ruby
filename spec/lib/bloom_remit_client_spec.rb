@@ -18,7 +18,7 @@ RSpec.describe BloomRemitClient do
       encoded_string = Base64.strict_encode64("5:sikret")
 
       aggregate_failures do
-        expect(subscription[:headers]["HTTP_AUTHORIZATION"])
+        expect(subscription[:headers]["Authorization"])
           .to eq "Basic #{encoded_string}"
         expect(subscription[:channels][described_class::TXN_UPDATES_CHANNEL]).
           to eq({processor: "Processor"})
