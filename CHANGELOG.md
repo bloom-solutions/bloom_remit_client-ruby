@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.18.0] - 2021-03-10
 ### Changed
 - Pass `message_id` of 0 so it reads logs from the start on boot
 
