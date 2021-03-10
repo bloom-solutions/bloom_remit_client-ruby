@@ -51,7 +51,10 @@ module BloomRemitClient
         "Authorization" => "Basic #{token}"
       },
       channels: {
-        TXN_UPDATES_CHANNEL => { processor: configuration.on_txn_update },
+        TXN_UPDATES_CHANNEL => { 
+          processor: configuration.on_txn_update,
+          message_id: 0,
+        },
       }
     })
   end
