@@ -21,7 +21,7 @@ RSpec.describe BloomRemitClient do
         expect(subscription[:headers]["Authorization"])
           .to eq "Basic #{encoded_string}"
         expect(subscription[:channels][described_class::TXN_UPDATES_CHANNEL]).
-          to eq({processor: "Processor"})
+          to eq({message_id: 0, processor: "Processor"})
       end
     end
   end
